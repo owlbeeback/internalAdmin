@@ -9,6 +9,8 @@
   "author": "sheryl boughton",
   "license": "ISC",
   "dependencies": {
+    "angular": "^1.5.0",
+    "angular-ui-router": "^0.2.18",
     "bootstrap-sass": "^3.3.6",
     "webpack": "^1.12.14"
   },

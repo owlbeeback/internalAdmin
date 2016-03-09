@@ -1,0 +1,23 @@
+{
+  "name": "aria_internal_admin",
+  "version": "1.0.0",
+  "description": "inside use",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "sheryl boughton",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap-sass": "^3.3.6",
+    "webpack": "^1.12.14"
+  },
+  "devDependencies": {
+    "css-loader": "^0.23.1",
+    "node-sass": "^3.4.2",
+    "raw-loader": "^0.5.1",
+    "sass-loader": "^3.1.2",
+    "style-loader": "^0.13.0",
+    "webpack-dev-server": "^1.14.1"
+  }
+}

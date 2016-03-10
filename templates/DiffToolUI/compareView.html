@@ -1,0 +1,53 @@
+        <div class="row">
+            <div class="col-md-6 ">
+				<div class="dropdown">
+					<button class="btn btn-default dropdown-toggle col-md-12" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+						Dropdown
+						<span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu col-md-12" aria-labelledby="dropdownMenu1">
+						<li ng-repeat="version in versions track by $index"><a ng-click="getV1($index)">{{version.modifiedUtcDateTime | momentsAgo}}</a></li>
+						<li role="separator" class="divider"></li>
+					</ul>
+				</div>
+            </div>
+			
+            <div class="col-md-6 ">
+                <div class="dropdown">
+					<button class="btn btn-default dropdown-toggle col-md-12" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+						Dropdown
+						<span class="caret"></span>
+					</button>
+				<ul class="dropdown-menu col-md-12" aria-labelledby="dropdownMenu2">
+						<li ng-repeat="version in versions track by $index"><a ng-click="getV2($index)">{{version.modifiedUtcDateTime | momentsAgo}}</a></li>
+						<li role="separator" class="divider"></li>
+					</ul>
+				</div>
+            </div>
+        </div>
+        
+        <button ng-click="compareVersions()">Compare</button>
+		<br>	
+		<br>	
+		
+		<div><span style="font-weight: bold">Version 1: </span>{{v1}}</div>
+		<div><span style="font-weight: bold">Version 2: </span> {{v2}}</div>
+	
+		
+		<br>	
+		<br>	
+		<div class="container">
+			<table class="table">
+				<thead>	
+					<th ng-repeat="(key, value) in diffData[0] track by $index">{{key}}</th>
+				</thead>
+				<tbody>	
+					<tr ng-repeat="diff in diffData">	
+						<td>{{diff.Dataset}}</td>
+						<td>{{diff.Property}}</td>
+						<td>{{diff.Version1}}</td>
+						<td>{{diff.Version2}}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>

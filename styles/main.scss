@@ -1,9 +1,52 @@
-$font-stack:    Helvetica, sans-serif;
+$font-stack: Helvetica, sans-serif;
 $font-color: #FFEFE3;
-$base-color:  #FF6C00;
+$base-color: #FF6C00;
+$base-brown: #6A2D00;
+$comp-brown: #675445;
+$comp-peuce: #ADC2C0;
+$comp-teal: #00423B;
+$comp-storm: #2B403E;
+$comp-gray: #969696;
+$comp-aqua: #00EFD6;
 
 body {
   font: 100% $font-stack;
   color: $font-color;
-  background-color: $base-color;
+  background-color: $comp-gray;
+}
+#menu-container {
+    border: 8px solid $comp-storm;
+    border-left: 10px solid $comp-storm;
+}
+
+.menu-row {
+    height: 50%;
+}
+
+.menu-col {
+    border: 2px solid $comp-storm;
+    height: 100%;
+}
+
+#diffToolButton {
+    background-color: $base-color;
+}
+
+#otherButton1{
+    background-color: $comp-teal
+}
+
+#otherButton2 {
+    background-color: $comp-brown;
+    
+}
+
+#otherButton3{
+    background-color: $base-brown
+}
+#otherButton4{
+    background-color: $comp-peuce;
+}
+#otherButton5{
+    background-color: $base-color;
 }

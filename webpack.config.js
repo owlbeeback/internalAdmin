@@ -1,17 +1,20 @@
 var debug = process.env.NODE_ENV !== "production";
 var webpack = require('webpack');
-
 module.exports = {
   watch: true,
   context: __dirname,
   devtool: debug ? "inline-sourcemap" : null,
-  entry: "./js/scripts.js",
+  entry: "./src/entrypoint.js",
   output: {
-    path: __dirname + "/js",
-    filename: "scripts.min.js"
+    // path: __dirname + "/js",
+    filename: "bundle.js"
   },
   module: {
     loaders: [
+        {
+            test   : /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
+            loader : 'file-loader'
+        },
         {
             test: /\.scss$/,
             loader: 'style!css!sass'

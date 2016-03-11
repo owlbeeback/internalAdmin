@@ -1,0 +1,22 @@
+{
+  "name": "aria_internal_admin",
+  "description": "inside use",
+  "main": "index.js",
+  "authors": [
+    "sheryl boughton"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/owlbeeback/internalAdmin",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "ui-bootstrap": "^1.2.4",
+    "lodash": "^4.6.1"
+  }
+}

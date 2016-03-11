@@ -1,21 +1,26 @@
-<h3>Select a Site</h3>
 
-<table class="table">
-    <thead>
-        <th>Key</th>
-        <th>Name</th>
-    </thead>
-    <tr ng-repeat="row in filteredSites" ui-sref="compare({siteKey: row.key})">
-        <td>{{row.key}}</td>
-        <td>{{row.name}}</td>
-    </tr>
-</table>
+<div class="container">
+    
+    <h3>Select a Site</h3>
 
-<div>
-    <uib-pagination  boundary-links="true" total-items="totalItems" ng-model="currentPage" max-size="maxSize" num-pages="x" force-ellipses="true" ng-change="pageChanged()"></uib-pagination>
-    <br>
+    <table class="table">
+        <thead>
+            <th>Key</th>
+            <th>Name</th>
+        </thead>
+        <tr ng-repeat="row in filteredSites" ui-sref="compare({siteKey: row.key})">
+            <td>{{row.key}}</td>
+            <td>{{row.name}}</td>
+        </tr>
+    </table>
+
+    <div>
+        <uib-pagination  boundary-links="true" total-items="totalItems" ng-model="currentPage" max-size="maxSize" num-pages="x" force-ellipses="true" ng-change="pageChanged()"></uib-pagination>
+        <br>
+        
+        <hr/>
+        
+        <pre>Page: {{currentPage}} / {{x}}</pre>
+    </div>
     
-    <hr/>
-    
-    <pre>Page: {{currentPage}} / {{x}}</pre>
 </div>

@@ -9,9 +9,19 @@ app.config(function($stateProvider, $urlRouterProvider){
         templateUrl: "/templates/menu.html"
     })
     .state('diffCheck', {
-        url: "/diffCheck",
-        templateUrl: "/templates/DiffToolUI/diffCheck.html",
-        // controller: "selectSiteCtrl"
+        abstract: true,
+        url: "",
+        templateUrl: "/templates/DiffToolUI/diffCheck.html"
+    })
+    .state('diffCheck.siteSelect', {
+        url: "/siteSelect",
+        views:{
+            "": {
+                templateUrl: "/templates/DiffToolUI/siteSelector.html",
+                controller: "selectSiteCtrl"
+            }
+           
+        }
     })
     .state('compare', {
         url: "/compare/:siteKey",		

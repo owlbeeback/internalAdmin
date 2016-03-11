@@ -1,2 +1,3 @@
-node_modules/
+bower_components/ 
 00refactorexample.js
+node_modules/

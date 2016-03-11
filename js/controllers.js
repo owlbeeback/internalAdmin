@@ -8,7 +8,7 @@ angular.module('internalAdmin')
 })
 
 .controller("selectSiteCtrl", function($scope, $http, $state, $log){
-
+  
 	$scope.currentPage = 1;//can be set programatically; no default
 	$scope.numPerPage = 10;
 	$scope.maxSize = 5;//refers to max visible page select buttons

@@ -37,7 +37,7 @@ angular.module('internalAdmin')
 })
 
 .controller("comparisonCtrl", function($scope, $http, $state, $stateParams){
-	
+ 	
 	var siteKey = $stateParams.siteKey;
 	$http.get("http://localhost:61668/api/sites/"+ siteKey +"/archives")
 	.then(function(res){
@@ -47,7 +47,7 @@ angular.module('internalAdmin')
 	.catch(function(err){
 		console.log(err);
 	})
-	
+	 
 	var comparisonInfo = {};
 	
 	$scope.getV1 = function(idx1){

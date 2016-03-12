@@ -1,26 +1,29 @@
+       
+       <div class="container" id="compareViewContainer">
+        <h3>Select 2 Versions</h3>
         <div class="row">
             <div class="col-md-6 ">
-				<div class="dropdown">
+				<div class="dropdown versionCompareDropDown">
 					<button class="btn btn-default dropdown-toggle col-md-12" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-						Dropdown
+						Version 1
 						<span class="caret"></span>
 					</button>
 					<ul class="dropdown-menu col-md-12" aria-labelledby="dropdownMenu1">
-						<li ng-repeat="version in versions track by $index"><a ng-click="getV1($index)">{{version.modifiedUtcDateTime | momentsAgo}}</a></li>
-						<li role="separator" class="divider"></li>
+						<li ng-repeat="version in versions track by $index" class="versionList"><a ng-click="getV1($index)">{{version.modifiedUtcDateTime | momentsAgo}}</a></li>
+						<!--<li role="separator" class="divider"></li>-->
 					</ul>
 				</div>
             </div>
 			
             <div class="col-md-6 ">
-                <div class="dropdown">
+                <div class="dropdown versionCompareDropDown">
 					<button class="btn btn-default dropdown-toggle col-md-12" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-						Dropdown
+						Version 2
 						<span class="caret"></span>
 					</button>
 				<ul class="dropdown-menu col-md-12" aria-labelledby="dropdownMenu2">
-						<li ng-repeat="version in versions track by $index"><a ng-click="getV2($index)">{{version.modifiedUtcDateTime | momentsAgo}}</a></li>
-						<li role="separator" class="divider"></li>
+						<li ng-repeat="version in versions track by $index" class="versionList"><a ng-click="getV2($index)">{{version.modifiedUtcDateTime | momentsAgo}}</a></li>
+						<!--<li role="separator" class="divider"></li>-->
 					</ul>
 				</div>
             </div>
@@ -51,3 +54,5 @@
 				</tbody>
 			</table>
 		</div>
+           
+       </div>

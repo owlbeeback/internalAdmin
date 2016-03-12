@@ -14,7 +14,8 @@ require('../styles/main.scss');
 ////////////////////////////////
 
 //js
-// global.angular = require('angular');
+global.moment = require('moment');
+require('bootstrap-sass/assets/javascripts/bootstrap.js');
 require('../bower_components/lodash/dist/lodash.min.js');
 require('../bower_components/ui-bootstrap/index.js');//required angular locally into this file
 require('angular-ui-router');

@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Ranga:700);
 $font-stack: 'Ranga', cursive;
+$sub-font-stack: monospace, sans-serif, serif;
 $font-color: #DDF8F6;
 $base-color: #FF6C00;
 $base-brown: #320101;
@@ -44,6 +45,7 @@ body {
     transition: -webkit-transform .1s linear;
     width: 32.6%;
     margin: 3px;
+    margin-left: 0.45%;
 }
 
 .menu-col:hover {
@@ -82,4 +84,24 @@ body {
 
 #otherButton5{
     background-color: $base-color;
+}
+
+.site-selector-table {
+   font-family:  $sub-font-stack;
+}
+
+.site-selector-table td:hover {
+    cursor: pointer;
+}
+
+#compareViewContainer {
+    font-size: 2rem;
+}
+
+.versionCompareDropDown {
+    font-family: $sub-font-stack;
+}
+
+.versionList:not(:last-of-type) {
+    border-bottom: 1px dotted $comp-storm;
 }

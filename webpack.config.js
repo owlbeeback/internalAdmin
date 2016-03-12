@@ -1,9 +1,11 @@
+process.env.NODE_ENV = "dev";
 var debug = process.env.NODE_ENV !== "production";
 var webpack = require('webpack');
 module.exports = {
   watch: true,
   context: __dirname,
-  devtool: debug ? "inline-sourcemap" : null,
+//   devtool: debug ? "inline-sourcemap" : null,
+  devtool: 'source-map',
   entry: "./src/entrypoint.js",
   output: {
     // path: __dirname + "/js",
@@ -35,4 +37,6 @@ module.exports = {
     new webpack.optimize.UglifyJsPlugin({ mangle: false, sourcemap: false }),
   ],
 };
+
+console.log("~~~~~~~~~~~~~~~~~~HALLLOOOOOOOO!!~~~~~~~~~~~~~~~~~: " + process.env.NODE_ENV)
 

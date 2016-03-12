@@ -1,14 +1,14 @@
 
-<div class="container">
+<div class="container ">
     
     <h3>Select a Site</h3>
 
-    <table class="table">
+    <table class="table site-selector-table">
         <thead>
             <th>Key</th>
             <th>Name</th>
         </thead>
-        <tr ng-repeat="row in filteredSites" ui-sref="compare({siteKey: row.key})">
+        <tr ng-repeat="row in filteredSites" ui-sref="diffCheck.compare({siteKey: row.key})">
             <td>{{row.key}}</td>
             <td>{{row.name}}</td>
         </tr>
@@ -23,4 +23,4 @@
         <pre>Page: {{currentPage}} / {{x}}</pre>
     </div>
     
-</div>
+</div> 

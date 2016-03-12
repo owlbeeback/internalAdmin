@@ -23,9 +23,9 @@ app.config(function($stateProvider, $urlRouterProvider){
            
         }
     })
-    .state('compare', {
+    .state('diffCheck.compare', {
         url: "/compare/:siteKey",		
-        templateUrl: 'compareView.html',
+        templateUrl: '/templates/DiffToolUI/compareView.html',
         controller: "comparisonCtrl"
     })
     .state('state2', {

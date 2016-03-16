@@ -33,12 +33,12 @@ body {
 }
 
 .menu-title {
-    font-family: $font-stack;
+    font-family: "Ranga", cursive;
     font-weight: 800;
-    font-size: 800%;
-    margin-bottom: 10px;
+    font-size: 5vw;
+    margin-bottom: 3vh;
     border-bottom: 4px solid;
-    color: $font-color;
+    color: #DDF8F6;
 }
 
 .menu-row {
@@ -92,6 +92,48 @@ body {
 
 #otherButton5{
     background-color: $base-color;
+}
+
+.col-md-3.menu_button {
+    width: 32.5%;
+    float: left;
+}
+
+@media only screen and (max-width: 816px) {
+
+   body { background-color: deeppink; }
+   .col-md-3.menu_button {
+       width: 32.35%!important;
+   }
+
+}
+
+@media only screen and (max-width: 595px) {
+
+   body { background-color: deeppink; }
+   .col-md-3.menu_button {
+       width: 32%!important;
+   }
+
+}
+
+@media only screen and (max-width: 351px) {
+
+   body { background-color: orangered }
+   .col-md-3.menu_button {
+       width: 100%!important;
+   }
+   .menu-title {
+       display: none;
+   }
+   
+   #diff-menu-icon{
+        padding-top: 23%;
+        max-height: 90%;
+        max-width: 100%;
+    }
+
+
 }
 
 .site-selector-table {

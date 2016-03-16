@@ -92,7 +92,7 @@
 /* 4 */
 /***/ function(module, exports) {
 
-	module.exports = "\r\n<h1 class=\"page-header\">Comparison Tool</h1>\r\n<div ui-view></div>\r\n"
+	module.exports = "\r\n<h1 class=\"page-header\">Comparison Tool <a href=\"#\"><i class=\"icon-home pull-right\" id=\"navHome\"></i></a> </h1>\r\n\r\n<div ui-view></div>\r\n"
 
 /***/ },
 /* 5 */
@@ -509,7 +509,7 @@
 	exports.push([module.id, "@import url(https://fonts.googleapis.com/css?family=Ranga:700);", ""]);
 	
 	// module
-	exports.push([module.id, "body {\n  font: 100% \"Ranga\", cursive;\n  background-color: #ADC2C0;\n  border: 8px solid #2B403E;\n  border-left: 8px solid #2B403E; }\n\n#diff-menu-icon {\n  max-height: 55%;\n  max-width: 55%;\n  -webkit-filter: invert(100%) brightness(2); }\n\n.menu-title {\n  font-family: \"Ranga\", cursive;\n  font-weight: 800;\n  font-size: 800%;\n  margin-bottom: 10px;\n  border-bottom: 4px solid;\n  color: #DDF8F6; }\n\n.menu-row {\n  height: 50%; }\n\n.menu-col {\n  border: 4px solid #2B403E;\n  border-radius: 20px;\n  height: 99%;\n  text-align: center;\n  transition: -webkit-transform .1s linear;\n  width: 32.6%;\n  margin: 3px;\n  margin-left: 0.45%; }\n\n.menu-col:hover {\n  -webkit-transform: scale(1.03, 1.03);\n  cursor: pointer;\n  -webkit-filter: brightness(1.28); }\n\n.menu-col:active {\n  -webkit-transform: scale(0.98, 0.98); }\n\n#diffToolButton {\n  background-color: #FF6C00;\n  transition: -webkit-transform .1s linear; }\n\n#otherButton1 {\n  background-color: #00423B; }\n\n#otherButton2 {\n  background-color: #320101; }\n\n#otherButton3 {\n  background-color: #320101; }\n\n#otherButton4 {\n  background-color: #4c6764; }\n\n#otherButton5 {\n  background-color: #FF6C00; }\n\n.site-selector-table {\n  font-family: monospace, sans-serif, serif; }\n\n.site-selector-table td:hover {\n  cursor: pointer; }\n\n#compareViewContainer {\n  font-size: 2rem; }\n\n.versionCompareDropDown {\n  font-family: monospace, sans-serif, serif; }\n\n.versionList:not(:last-of-type) {\n  border-bottom: 1px dotted #2B403E; }\n", ""]);
+	exports.push([module.id, "body {\n  font: 100% \"Ranga\", cursive;\n  background-color: #ADC2C0;\n  border: 8px solid #2B403E;\n  border-left: 8px solid #2B403E; }\n\n#navHome {\n  color: #2B403E; }\n\n#navHome:hover {\n  color: #4c6764; }\n\n#diff-menu-icon {\n  max-height: 55%;\n  max-width: 55%;\n  -webkit-filter: invert(100%) brightness(2); }\n\n.menu-title {\n  font-family: \"Ranga\", cursive;\n  font-weight: 800;\n  font-size: 800%;\n  margin-bottom: 10px;\n  border-bottom: 4px solid;\n  color: #DDF8F6; }\n\n.menu-row {\n  height: 50%; }\n\n.menu-col {\n  border: 4px solid #2B403E;\n  border-radius: 20px;\n  height: 99%;\n  text-align: center;\n  transition: -webkit-transform .1s linear;\n  width: 32.6%;\n  margin: 3px;\n  margin-left: 0.45%; }\n\n.menu-col:hover {\n  -webkit-transform: scale(1.03, 1.03);\n  cursor: pointer;\n  -webkit-filter: brightness(1.28); }\n\n.menu-col:active {\n  -webkit-transform: scale(0.98, 0.98); }\n\n#diffToolButton {\n  background-color: #FF6C00;\n  transition: -webkit-transform .1s linear; }\n\n#otherButton1 {\n  background-color: #00423B; }\n\n#otherButton2 {\n  background-color: #320101; }\n\n#otherButton3 {\n  background-color: #320101; }\n\n#otherButton4 {\n  background-color: #4c6764; }\n\n#otherButton5 {\n  background-color: #FF6C00; }\n\n.site-selector-table {\n  font-family: monospace, sans-serif, serif; }\n\n.site-selector-table td:hover {\n  cursor: pointer; }\n\n#compareViewContainer {\n  font-size: 2rem; }\n\n.versionCompareDropDown {\n  font-family: monospace, sans-serif, serif; }\n\n.versionList:not(:last-of-type) {\n  border-bottom: 1px dotted #2B403E; }\n\n#comparisonResultsTBody {\n  font-family: monospace, sans-serif, serif; }\n\n.btn-primary {\n  color: #DDF8F6;\n  background-color: #2B403E;\n  border-color: #00423B;\n  letter-spacing: 2px;\n  font-size: 20px;\n  padding: 0 5 0 5; }\n\n.btn-primary:hover {\n  color: #2B403E;\n  background-color: #DDF8F6;\n  border-color: #00423B;\n  letter-spacing: 2px;\n  font-size: 20px;\n  padding: 0 5 0 5; }\n", ""]);
 	
 	// exports
 
@@ -55879,8 +55879,38 @@
 	  };
 	})
 	
+	.filter('trimNotes', function() {//in progress
+	  return function(input) {
+	    var trimmedNotes = [];
+	    try {
+	        var res = JSON.parse(input);
+	            console.log(typeof res)
+	        if(Array.isArray(res)){
+	            console.log("TRUUEUEUEUE!")
+	            res.forEach(function(el){
+	                var note = {}
+	                note[el.NOTE] = moment(el.CREATEDDATETIME).format('MM/DD/YYYY HH:mm');
+	                console.log(note)
+	                trimmedNotes.push(note)
+	            })
+	                console.log(trimmedNotes)
+	        }
+	    } 
+	    catch (e) {
+	        console.log("there was no array.")
+	        trimmedNotes.push(input);
+	        console.log(input)
+	        console.log("res notes: "+ trimmedNotes)
+	        // return e;
+	    }
+	        console.log("returned notes: "+ trimmedNotes)
+	            return trimmedNotes[0];
+	   
+	  };
+	}) 
+	
 	.controller("selectSiteCtrl", function($scope, $http, $state, $log){
-	  
+	
 		$scope.currentPage = 1;//can be set programatically; no default
 		$scope.numPerPage = 10;
 		$scope.maxSize = 5;//refers to max visible page select buttons
@@ -55934,18 +55964,26 @@
 		}
 		
 		$scope.compareVersions = function(){
-			$http.post("http://localhost:61668/api/sites/"+ siteKey +"/archives", comparisonInfo)
-			.then(function(res){
-				// console.log(res.data);
-				$scope.diffData = [];
-				res.data.forEach(function(el) {
-					$scope.diffData.push(JSON.parse(el))
-				});
-				console.log($scope.diffData);
-			})
-			.catch(function(err){
-				console.log(err);
-			})
+	        if($scope.v1 === $scope.v2){
+	            alert("Please select 2 different versions.")
+	        }
+	        else{
+	            $http.post("http://localhost:61668/api/sites/"+ siteKey +"/archives", comparisonInfo)
+	            .then(function(res){
+	                // console.log(res.data);
+	                $scope.diffData = [];
+	                res.data.forEach(function(el) {
+	                    $scope.diffData.push(JSON.parse(el))
+	                });
+	                console.log($scope.diffData);
+	                if($scope.diffData.length === 0){
+	                    alert("No differences found.")
+	                }
+	            })
+	            .catch(function(err){
+	                console.log(err);
+	            })
+	        }
 		}
 		
 	});

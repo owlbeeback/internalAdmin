@@ -18,6 +18,14 @@ body {
     border-left: 8px solid $comp-storm;
 }
 
+#navHome {
+   color: $comp-storm;
+}
+
+#navHome:hover {
+   color: $comp-sea;
+}
+
 #diff-menu-icon {
     max-height: 55%;
     max-width: 55%;
@@ -104,4 +112,26 @@ body {
 
 .versionList:not(:last-of-type) {
     border-bottom: 1px dotted $comp-storm;
+}
+
+#comparisonResultsTBody {
+    font-family: $sub-font-stack;
+}
+
+.btn-primary {
+    color: $font-color;
+    background-color: #2B403E;
+    border-color: #00423B;
+    letter-spacing: 2px;
+    font-size: 20px;
+    padding: 0 5 0 5;
+}
+
+.btn-primary:hover {
+    color: $comp-storm;
+    background-color: $font-color;
+    border-color: #00423B;
+    letter-spacing: 2px;
+    font-size: 20px;
+    padding: 0 5 0 5;
 }

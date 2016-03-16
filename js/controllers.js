@@ -7,8 +7,38 @@ angular.module('internalAdmin')
   };
 })
 
+.filter('trimNotes', function() {//in progress
+  return function(input) {
+    var trimmedNotes = [];
+    try {
+        var res = JSON.parse(input);
+            console.log(typeof res)
+        if(Array.isArray(res)){
+            console.log("TRUUEUEUEUE!")
+            res.forEach(function(el){
+                var note = {}
+                note[el.NOTE] = moment(el.CREATEDDATETIME).format('MM/DD/YYYY HH:mm');
+                console.log(note)
+                trimmedNotes.push(note)
+            })
+                console.log(trimmedNotes)
+        }
+    } 
+    catch (e) {
+        console.log("there was no array.")
+        trimmedNotes.push(input);
+        console.log(input)
+        console.log("res notes: "+ trimmedNotes)
+        // return e;
+    }
+        console.log("returned notes: "+ trimmedNotes)
+            return trimmedNotes[0];
+   
+  };
+}) 
+
 .controller("selectSiteCtrl", function($scope, $http, $state, $log){
-  
+
 	$scope.currentPage = 1;//can be set programatically; no default
 	$scope.numPerPage = 10;
 	$scope.maxSize = 5;//refers to max visible page select buttons
@@ -62,18 +92,26 @@ angular.module('internalAdmin')
 	}
 	
 	$scope.compareVersions = function(){
-		$http.post("http://localhost:61668/api/sites/"+ siteKey +"/archives", comparisonInfo)
-		.then(function(res){
-			// console.log(res.data);
-			$scope.diffData = [];
-			res.data.forEach(function(el) {
-				$scope.diffData.push(JSON.parse(el))
-			});
-			console.log($scope.diffData);
-		})
-		.catch(function(err){
-			console.log(err);
-		})
+        if($scope.v1 === $scope.v2){
+            alert("Please select 2 different versions.")
+        }
+        else{
+            $http.post("http://localhost:61668/api/sites/"+ siteKey +"/archives", comparisonInfo)
+            .then(function(res){
+                // console.log(res.data);
+                $scope.diffData = [];
+                res.data.forEach(function(el) {
+                    $scope.diffData.push(JSON.parse(el))
+                });
+                console.log($scope.diffData);
+                if($scope.diffData.length === 0){
+                    alert("No differences found.")
+                }
+            })
+            .catch(function(err){
+                console.log(err);
+            })
+        }
 	}
 	
 });

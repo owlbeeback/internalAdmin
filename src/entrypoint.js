@@ -6,6 +6,7 @@ require('../index.html');
 require('../templates/menu.html');
 require('../templates/DiffToolUI/siteSelector.html');
 require('../templates/DiffToolUI/diffCheck.html');
+require('../templates/DiffToolUI/compareView.html');
 //////////////////////////
 
 //styles

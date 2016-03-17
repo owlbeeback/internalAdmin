@@ -52,6 +52,7 @@
 	__webpack_require__(2);
 	__webpack_require__(3);
 	__webpack_require__(4);
+	__webpack_require__(127);
 	//////////////////////////
 	
 	//styles
@@ -80,7 +81,7 @@
 /* 2 */
 /***/ function(module, exports) {
 
-	module.exports = " \r\n<div id=\"menu-container\">\r\n    <div class=\"row menu-row\">\r\n        <div class=\"col-lg-4 col-md-3 menu-col menu_button\" id=\"diffToolButton\" ui-sref=\"diffCheck.siteSelect\">\r\n            <h1 class=\"menu-title\">Comparison Tool</h1>\r\n            <img src=\"/assets/compare.png\" alt=\"\" id=\"diff-menu-icon\">\r\n        </div>\r\n        <div class=\"col-lg-4 col-md-3 menu-col menu_button\" id=\"otherButton1\"></div>\r\n        <div class=\"col-lg-4 col-md-3 menu-col menu_button\" id=\"otherButton2\"></div>\r\n    </div>\r\n\r\n    <div class=\"row menu-row\">\r\n        <div class=\"col-lg-4 col-md-3 menu-col menu_button\" id=\"otherButton3\"></div>\r\n        <div class=\"col-lg-4 col-md-3 menu-col menu_button\" id=\"otherButton4\"></div>\r\n        <div class=\"col-lg-4 col-md-3 menu-col menu_button\" id=\"otherButton5\"></div>           \r\n    </div>  \r\n</div> \r\n"
+	module.exports = " \r\n<div id=\"menu-container\">\r\n    <div class=\"row menu-row\">\r\n        <div class=\"col-lg-4 col-md-3 menu-col menu_button\" id=\"diffToolButton\" ui-sref=\"diffCheck.siteSelect\">\r\n            <h1 class=\"menu-title\">Comparison Tool</h1>\r\n            <img src=\"/assets/compare.png\" alt=\"\" id=\"diff-menu-icon\">\r\n        </div>\r\n        <div class=\"col-lg-4 col-md-3 menu-col menu_button\" id=\"otherButton1\"></div>\r\n        <div class=\"col-lg-4 col-md-3 menu-col menu_button\" id=\"otherButton2\"></div>\r\n    </div>\r\n\r\n    <div class=\"row menu-row\">\r\n        <div class=\"col-lg-4 col-md-3 menu-col menu_button\" id=\"otherButton3\"></div>\r\n        <div class=\"col-lg-4 col-md-3 menu-col menu_button\" id=\"otherButton4\"></div>\r\n        <div class=\"col-lg-4 col-md-3 menu-col menu_button\" id=\"otherButton5\"></div>           \r\n    </div>  \r\n</div> \r\n\r\n"
 
 /***/ },
 /* 3 */
@@ -58410,6 +58411,12 @@
 	
 	}(jQuery);
 
+
+/***/ },
+/* 127 */
+/***/ function(module, exports) {
+
+	module.exports = "       \r\n       <div class=\"container\" id=\"compareViewContainer\">\r\n        <h3>Select 2 Versions</h3>\r\n        <div class=\"row\">\r\n            <div class=\"col-md-6 \">\r\n\t\t\t\t<div class=\"dropdown versionCompareDropDown\">\r\n\t\t\t\t\t<button class=\"btn btn-default dropdown-toggle col-md-12\" type=\"button\" id=\"dropdownMenu1\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"true\">\r\n\t\t\t\t\t\tVersion 1\r\n\t\t\t\t\t\t<span class=\"caret\"></span>\r\n\t\t\t\t\t</button>\r\n\t\t\t\t\t<ul class=\"dropdown-menu col-md-12\" aria-labelledby=\"dropdownMenu1\">\r\n\t\t\t\t\t\t<li ng-repeat=\"version in versions track by $index\" class=\"versionList\"><a ng-click=\"getV1($index)\">{{version.modifiedUtcDateTime | momentsAgo}}</a></li>\r\n\t\t\t\t\t\t<!--<li role=\"separator\" class=\"divider\"></li>-->\r\n\t\t\t\t\t</ul>\r\n\t\t\t\t</div>\r\n            </div>\r\n\t\t\t\r\n            <div class=\"col-md-6 \">\r\n                <div class=\"dropdown versionCompareDropDown\">\r\n\t\t\t\t\t<button class=\"btn btn-default dropdown-toggle col-md-12\" type=\"button\" id=\"dropdownMenu2\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"true\">\r\n\t\t\t\t\t\tVersion 2\r\n\t\t\t\t\t\t<span class=\"caret\"></span>\r\n\t\t\t\t\t</button>\r\n\t\t\t\t<ul class=\"dropdown-menu col-md-12\" aria-labelledby=\"dropdownMenu2\">\r\n\t\t\t\t\t\t<li ng-repeat=\"version in versions track by $index\" class=\"versionList\"><a ng-click=\"getV2($index)\">{{version.modifiedUtcDateTime | momentsAgo}}</a></li>\r\n\t\t\t\t\t\t<!--<li role=\"separator\" class=\"divider\"></li>-->\r\n\t\t\t\t\t</ul>\r\n\t\t\t\t</div>\r\n            </div>\r\n        </div>\r\n        \r\n        <button class=\"btn btn-primary\" ng-click=\"compareVersions()\">Compare</button>\r\n\t\t<br>\t\r\n\t\t<br>\t\r\n\t\t\r\n\t\t<div><span style=\"font-weight: bold\">Version 1: </span>{{v1}}</div>\r\n\t\t<div><span style=\"font-weight: bold\">Version 2: </span> {{v2}}</div>\r\n\t\r\n\t\t\r\n\t\t<br>\t\r\n\t\t<br>\r\n        \r\n                \r\n\t\t<div class=\"container\">\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-3\">\r\n                <div class=\"input-group\">\r\n                    <input type=\"text\" ng-model=\"search\" class=\"form-control\"  placeholder=\"ex: siteinfo\">\r\n                    <span type=\"submit\" class=\"input-group-addon btn\">Search</span>\r\n                </div>\r\n            </div>\r\n        </div>\t\r\n\r\n            \t\r\n\t\t<br>\t\r\n        \r\n        \r\n\t\t\t<table class=\"table\">\r\n\t\t\t\t<thead>\t\r\n\t\t\t\t\t<th ng-repeat=\"(key, value) in diffData[0] track by $index\">{{key}}</th>\r\n\t\t\t\t</thead>\r\n\t\t\t\t<tbody id=\"comparisonResultsTBody\">\t\r\n\t\t\t\t\t<tr ng-repeat=\"diff in diffData | filter:search\">\t\r\n\t\t\t\t\t\t<td>{{diff.Dataset}}</td>\r\n\t\t\t\t\t\t<td>{{diff.Property}}</td>\r\n\t\t\t\t\t\t<td>{{diff.Version1}}</td>\r\n\t\t\t\t\t\t<td>{{diff.Version2}}</td>\r\n\t\t\t\t\t</tr>\r\n\t\t\t\t</tbody>\r\n\t\t\t</table>\r\n\t\t</div>\r\n           \r\n       </div>\r\nREMOVE TRIM FILTERS B4 RUNNING!"
 
 /***/ }
 /******/ ]);

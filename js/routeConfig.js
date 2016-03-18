@@ -1,6 +1,6 @@
 console.log("it'\s working!!")
 
-var app = angular.module("internalAdmin", ['ui.router']);
+var app = angular.module("internalAdmin", ['ui.router', 'ngAnimate', 'anim-in-out']);
 app.config(function($stateProvider, $urlRouterProvider){
     $urlRouterProvider.otherwise("/menu");
     $stateProvider

@@ -11,6 +11,7 @@ require('../templates/DiffToolUI/compareView.html');
 
 //styles
 require('bootstrap-sass/assets/stylesheets/_bootstrap.scss');
+require('angular-ui-router-anim-in-out/scss/anim-in-out.scss');
 require('../styles/main.scss');
 ////////////////////////////////
 
@@ -20,6 +21,8 @@ require('bootstrap-sass/assets/javascripts/bootstrap.js');
 require('../bower_components/lodash/dist/lodash.min.js');
 require('../bower_components/ui-bootstrap/index.js');//required angular locally into this file
 require('angular-ui-router');
+require('angular-animate');
+require('angular-ui-router-anim-in-out/anim-in-out.js');
 require('../js/routeConfig.js');
 require('../js/controllers.js');
 require('../js/interceptors.js');

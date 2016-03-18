@@ -60,7 +60,7 @@
 					<th ng-repeat="(key, value) in diffData[0] track by $index">{{key}}</th>
 				</thead>
 				<tbody id="comparisonResultsTBody">	
-					<tr ng-repeat="diff in diffData | filter:search">	
+					<tr ng-repeat="diff in diffData | filter:search" class="compareTr">	
 						<td>{{diff.Dataset}}</td>
 						<td>{{diff.Property}}</td>
 						<td>{{diff.Version1}}</td>

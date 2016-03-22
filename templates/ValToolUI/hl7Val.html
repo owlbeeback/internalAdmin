@@ -1,0 +1,63 @@
+
+    
+    
+<table id="hl7Table" class="table table-bordered-custom table-hover-custom">
+    <thead>
+        <tr><th id="tableTitle" colspan="3" class="text-center"> HL7</th></tr>
+        <tr>
+            <th>SEGMENT</th>
+            <th>FIELD</th>
+            <th>COMPONENT</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="diff in segmentDiffs track by $index">
+            <td ng-class="{elementMissing: diff.FirstElementPresent === false || diff.SecondElementPresent === false}" ng-click="showNestedDiffs($index)">{{diff.SegmentName}}</td>
+            <td>
+                <ul ng-repeat="x in diff.FieldDiff track by $index">
+                    <li ng-class="{elementMissing: x.FirstElementPresent === false || x.SecondElementPresent === false}">{{x.FieldName}}</li>
+                </ul>
+            </td>
+            <td id="tableCell">
+                <table id="componentTable">
+                    <thead>	
+                        <tr>
+                            <th ng-repeat="(key, value) in diff.FieldDiff[0].ComponentDiff[0] track by $index">
+                                {{key}}
+                            </th>
+                        </tr>
+				    </thead>
+                    <tbody ng-repeat="x in diff.FieldDiff track by $index">	
+                        <tr ng-repeat="y in x.ComponentDiff track by $index">	
+                            <td>
+                               {{y.ComponentName}}
+                            </td>
+                            <td>
+                               {{y.Component1Value}}
+                            </td>
+                            <td>
+                               {{y.Component2Value}}
+                            </td>
+                            <td>
+                               {{y.DataType}}
+                            </td>
+                            <td>
+                               {{y.FirstElementPresent}}
+                            </td>
+                            <td>
+                               {{y.SecondElementPresent}}
+                            </td>
+                        </tr>
+				    </tbody>
+                </table>
+                <!--<div ng-repeat="x in diff.FieldDiff track by $index">
+                    <div ng-repeat="y in x.ComponentDiff track by $index">
+                        {{y}}
+                    </div>
+                </div>-->
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+         

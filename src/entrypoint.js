@@ -7,6 +7,7 @@ require('../templates/menu.html');
 require('../templates/DiffToolUI/siteSelector.html');
 require('../templates/DiffToolUI/diffCheck.html');
 require('../templates/DiffToolUI/compareView.html');
+require('../templates/ValToolUI/hl7Val.html');
 //////////////////////////
 
 //styles
@@ -25,4 +26,5 @@ require('angular-animate');
 require('angular-ui-router-anim-in-out/anim-in-out.js');
 require('../js/routeConfig.js');
 require('../js/controllers.js');
+require('../js/controllers/HL7Ctrl.js');
 require('../js/interceptors.js');

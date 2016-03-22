@@ -1,15 +1,15 @@
 @import url(https://fonts.googleapis.com/css?family=Ranga:700);
 $font-stack: 'Ranga', cursive;
 $sub-font-stack: monospace, sans-serif, serif;
-$font-color: #DDF8F6;
+$font-color: #e8f2f1;
 $base-color: #FF6C00;
 $base-brown: #320101;
-$comp-brown: #675445;
 $comp-peuce: #ADC2C0;
 $comp-teal: #00423B;
 $comp-storm: #2B403E;
-$comp-gray: #969696;
 $comp-sea:  #4c6764;
+$error: #c67070;
+$error-hover: #dca7a7;
 
 body {
     font: 100% $font-stack;
@@ -17,6 +17,55 @@ body {
     border: 8px solid $comp-storm;
     border-left: 8px solid $comp-storm;
 }
+
+.elementMissing {
+    background-color: $error;
+    // background-color: #dca7a7;
+
+}
+.elementMissing:hover {
+    background-color: $error-hover;
+}
+
+#tableTitle {
+    background-color: $comp-storm;
+    color: $font-color;
+    font-size: larger;
+    border-radius: 10px 10px 0 0;
+    border-left: 2px solid $comp-storm;
+    border-right: 2px solid $comp-storm;
+    border-bottom: 2px solid $comp-storm;
+}
+
+#tableCell table {
+    // font-size: larger;
+    width: 100%;
+    
+}
+
+#hl7Table.table-bordered-custom td,
+#hl7Table.table-bordered-custom th:not(#tableTitle) 
+{
+    border: 2px solid $comp-storm;
+}
+#hl7Table.table-hover-custom tbody tr:hover,
+{
+    background-color: $font-color;
+    cursor: pointer;
+    font-size: larger;
+}
+
+#hl7Table.table-hover-custom thead th:not(#tableTitle),
+{
+    background-color: $comp-sea;
+    color: $font-color;
+}
+// #hl7Table.table-hover-custom thead th:not(#tableTitle):hover,
+// {
+//     background-color: $comp-sea;
+//     color: $font-color;
+//     cursor: pointer;
+// }
 
 #menu-container.anim-in-out.anim-out.anim-zoom-out-full.ng-enter,
 #menu-container.anim-in-out.anim-out.ng-enter .anim-zoom-out-full.ng-enter {
@@ -35,11 +84,11 @@ body {
           transition: all 500ms; }
 
 
-#navHome {
+#navHome, h1.page-header a {
    color: $comp-storm;
 }
 
-#navHome:hover {
+#navHome:hover, h1.page-header a:hover {
    color: $comp-sea;
 }
 
@@ -49,13 +98,25 @@ body {
     -webkit-filter: invert(100%) brightness(2);
 }
 
+i#val-menu-icon {
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: initial;
+    text-decoration: inherit;
+    -webkit-font-smoothing: antialiased;
+    font-size: 1907%;
+    color: #E8E5E5;
+    margin-top: 10%!important;
+}
+
 .menu-title {
     font-family: "Ranga", cursive;
     font-weight: 800;
     font-size: 5vw;
     margin-bottom: 3vh;
     border-bottom: 4px solid;
-    color: #DDF8F6;
+    // color: #DDF8F6;
+    color: #E8E5E5;
 }
 
 .menu-row {
@@ -90,7 +151,7 @@ body {
     transition: -webkit-transform .1s linear;
 }
 
-#otherButton1{
+#valToolButton {
     background-color: $comp-teal;
 }
 

@@ -53,6 +53,7 @@
 	__webpack_require__(3);
 	__webpack_require__(4);
 	__webpack_require__(127);
+	__webpack_require__(133);
 	//////////////////////////
 	
 	//styles
@@ -71,6 +72,7 @@
 	__webpack_require__(130);
 	__webpack_require__(122);
 	__webpack_require__(123);
+	__webpack_require__(134);
 	__webpack_require__(124);
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
@@ -84,7 +86,7 @@
 /* 2 */
 /***/ function(module, exports) {
 
-	module.exports = " \r\n<div id=\"menu-container\" class=\"anim-zoom-out-full\">\r\n    <div class=\"row menu-row\">\r\n        <div class=\"col-lg-4 col-md-3 menu-col menu_button\" id=\"diffToolButton\" ui-sref=\"diffCheck.siteSelect\">\r\n            <h1 class=\"menu-title\">Comparison Tool</h1>\r\n            <img src=\"/assets/compare.png\" alt=\"\" id=\"diff-menu-icon\" class=\"menu_icon\">\r\n        </div>\r\n        <div class=\"col-lg-4 col-md-3 menu-col menu_button\" id=\"otherButton1\"></div>\r\n        <div class=\"col-lg-4 col-md-3 menu-col menu_button\" id=\"otherButton2\"></div>\r\n    </div>\r\n\r\n    <div class=\"row menu-row\">\r\n        <div class=\"col-lg-4 col-md-3 menu-col menu_button\" id=\"otherButton3\"></div>\r\n        <div class=\"col-lg-4 col-md-3 menu-col menu_button\" id=\"otherButton4\"></div>\r\n        <div class=\"col-lg-4 col-md-3 menu-col menu_button\" id=\"otherButton5\"></div>           \r\n    </div>  \r\n</div> \r\n"
+	module.exports = " \r\n<div id=\"menu-container\" class=\"anim-zoom-out-full\">\r\n    <div class=\"row menu-row\">\r\n        <div class=\"col-lg-4 col-md-3 menu-col menu_button\" id=\"diffToolButton\" ui-sref=\"diffCheck.siteSelect\">\r\n            <h1 class=\"menu-title\">Comparison Tool</h1>\r\n            <img src=\"/assets/compare.png\" alt=\"\" id=\"diff-menu-icon\" class=\"menu_icon\">\r\n        </div>\r\n        <div class=\"col-lg-4 col-md-3 menu-col menu_button\" id=\"valToolButton\" ui-sref=\"validation.hl7\">\r\n            <h1 class=\"menu-title\">Validation Tools</h1>\r\n            <i class=\"icon-check menu_icon\" id=\"val-menu-icon\"></i>\r\n        </div>\r\n        <div class=\"col-lg-4 col-md-3 menu-col menu_button\" id=\"otherButton2\"></div>\r\n    </div>\r\n\r\n    <div class=\"row menu-row\">\r\n        <div class=\"col-lg-4 col-md-3 menu-col menu_button\" id=\"otherButton3\"></div>\r\n        <div class=\"col-lg-4 col-md-3 menu-col menu_button\" id=\"otherButton4\"></div>\r\n        <div class=\"col-lg-4 col-md-3 menu-col menu_button\" id=\"otherButton5\"></div>           \r\n    </div>  \r\n</div> \r\n\r\n\"other button\" ids temporary until i know the other tool names."
 
 /***/ },
 /* 3 */
@@ -96,7 +98,7 @@
 /* 4 */
 /***/ function(module, exports) {
 
-	module.exports = "\r\n<h1 class=\"page-header\">Comparison Tool <a href=\"#\"><i class=\"icon-home pull-right\" id=\"navHome\"></i></a> </h1>\r\n\r\n<div ui-view  class=\"comparison_page\"></div>\r\n"
+	module.exports = "\r\n<h1 class=\"page-header\"><a href=\"#\">Comparison Tool</a> <a href=\"#\"><i class=\"icon-home pull-right\" id=\"navHome\"></i></a> </h1>\r\n\r\n<div ui-view  class=\"comparison_page\"></div>\r\n"
 
 /***/ },
 /* 5 */
@@ -513,7 +515,7 @@
 	exports.push([module.id, "@import url(https://fonts.googleapis.com/css?family=Ranga:700);", ""]);
 	
 	// module
-	exports.push([module.id, "body {\n  font: 100% \"Ranga\", cursive;\n  background-color: #ADC2C0;\n  border: 8px solid #2B403E;\n  border-left: 8px solid #2B403E; }\n\n#menu-container.anim-in-out.anim-out.anim-zoom-out-full.ng-enter,\n#menu-container.anim-in-out.anim-out.ng-enter .anim-zoom-out-full.ng-enter {\n  -webkit-transform: scale(0);\n  -ms-transform: scale(0);\n  transform: scale(0);\n  -webkit-transition: all 500ms;\n  transition: all 500ms; }\n\n#menu-container.anim-in-out.anim-out.anim-zoom-out-full.ng-leave,\n#menu-container.anim-in-out.anim-out.ng-leave .anim-zoom-out-full.ng-leave {\n  -webkit-transform: scale(1) !important;\n  -ms-transform: scale(1) !important;\n  transform: scale(1) !important;\n  -webkit-transition: all 500ms;\n  transition: all 500ms; }\n\n#navHome {\n  color: #2B403E; }\n\n#navHome:hover {\n  color: #4c6764; }\n\n#diff-menu-icon {\n  max-height: 55%;\n  max-width: 55%;\n  -webkit-filter: invert(100%) brightness(2); }\n\n.menu-title {\n  font-family: \"Ranga\", cursive;\n  font-weight: 800;\n  font-size: 5vw;\n  margin-bottom: 3vh;\n  border-bottom: 4px solid;\n  color: #DDF8F6; }\n\n.menu-row {\n  height: 50%; }\n\n.menu-col {\n  border: 4px solid #2B403E;\n  border-radius: 20px;\n  height: 99%;\n  text-align: center;\n  transition: -webkit-transform .1s linear;\n  width: 32.6%;\n  margin: 3px;\n  margin-left: 0.45%; }\n\n.menu-col:hover {\n  -webkit-transform: scale(1.03, 1.03);\n  cursor: pointer;\n  -webkit-filter: brightness(1.28); }\n\n.menu-col:active {\n  -webkit-transform: scale(0.98, 0.98); }\n\n#diffToolButton {\n  background-color: #FF6C00;\n  transition: -webkit-transform .1s linear; }\n\n#otherButton1 {\n  background-color: #00423B; }\n\n#otherButton2 {\n  background-color: #320101; }\n\n#otherButton3 {\n  background-color: #320101; }\n\n#otherButton4 {\n  background-color: #4c6764; }\n\n#otherButton5 {\n  background-color: #FF6C00; }\n\n.col-md-3.menu_button {\n  width: 32.5%;\n  float: left; }\n\n@media only screen and (max-width: 816px) {\n  body {\n    background-color: deeppink; }\n  .col-md-3.menu_button {\n    width: 32.35% !important; } }\n\n@media only screen and (max-width: 595px) {\n  body {\n    background-color: deeppink; }\n  .col-md-3.menu_button {\n    width: 32% !important; } }\n\n@media only screen and (max-width: 351px) {\n  body {\n    background-color: orangered; }\n  .col-md-3.menu_button {\n    width: 100% !important; }\n  .menu-title {\n    display: none; }\n  #diff-menu-icon {\n    padding-top: 23%;\n    max-height: 90%;\n    max-width: 100%; } }\n\n.site-selector-table {\n  font-family: monospace, sans-serif, serif; }\n\n.site-selector-table td:hover {\n  cursor: pointer; }\n\n#compareViewContainer {\n  font-size: 2rem; }\n\n.versionCompareDropDown {\n  font-family: monospace, sans-serif, serif; }\n\n.versionList:not(:last-of-type) {\n  border-bottom: 1px dotted #2B403E; }\n\n#comparisonResultsTBody {\n  font-family: monospace, sans-serif, serif; }\n\n.btn-primary {\n  color: #DDF8F6;\n  background-color: #2B403E;\n  border-color: #00423B;\n  letter-spacing: 2px;\n  font-size: 20px;\n  padding: 0 5 0 5; }\n\n.btn-primary:hover {\n  color: #2B403E;\n  background-color: #DDF8F6;\n  border-color: #00423B;\n  letter-spacing: 2px;\n  font-size: 20px;\n  padding: 0 5 0 5; }\n\n.compareTr.ng-enter,\n.compareTr.ng-leave {\n  -webkit-transition: 400ms cubic-bezier(0.25, 0.25, 0.75, 0.75) all;\n  -moz-transition: 400ms cubic-bezier(0.25, 0.25, 0.75, 0.75) all;\n  -ms-transition: 400ms cubic-bezier(0.25, 0.25, 0.75, 0.75) all;\n  -o-transition: 400ms cubic-bezier(0.25, 0.25, 0.75, 0.75) all;\n  transition: 400ms cubic-bezier(0.25, 0.25, 0.75, 0.75) all;\n  position: relative;\n  display: block; }\n\n.compareTr.ng-leave.ng-leave-active,\n.compareTr.ng-enter {\n  -webkit-transform: translatez(30px);\n  -moz-transform: translatez(30px);\n  -ms-transform: translatez(30px);\n  -o-transform: translatez(30px);\n  transform: translatez(30px);\n  opacity: 0;\n  height: 0px; }\n\n.compareTr.ng-enter.ng-enter-active,\n.compareTr.ng-leave {\n  -webkit-transform: translatez(30px);\n  -moz-transform: translatez(30px);\n  -ms-transform: translatez(30px);\n  -o-transform: translatez(30px);\n  transform: translatez(30px);\n  opacity: 1;\n  height: 30px; }\n\n.comparison_page.ng-enter,\n.comparison_page.ng-leave {\n  -webkit-animation: slideInRight 0.5s both ease-in;\n  -moz-animation: slideInRight 0.5s both ease-in;\n  animation: slideInRight 0.5s both ease-in; }\n\n@keyframes slideInRight {\n  from {\n    transform: translateX(100%); }\n  to {\n    transform: translateX(0); } }\n\n@-moz-keyframes slideInRight {\n  from {\n    -moz-transform: translateX(100%); }\n  to {\n    -moz-transform: translateX(0); } }\n\n@-webkit-keyframes slideInRight {\n  from {\n    -webkit-transform: translateX(100%); }\n  to {\n    -webkit-transform: translateX(0); } }\n\n@keyframes slideOutLeft {\n  to {\n    transform: translateX(-100%); } }\n\n@-moz-keyframes slideOutLeft {\n  to {\n    -moz-transform: translateX(-100%); } }\n\n@-webkit-keyframes slideOutLeft {\n  to {\n    -webkit-transform: translateX(-100%); } }\n\n@keyframes slideOutUp {\n  to {\n    transform: translateY(100%); }\n  from {\n    transform: translateY(0); } }\n\n@-moz-keyframes slideOutUp {\n  to {\n    transform: translateY(100%); }\n  from {\n    transform: translateY(0); } }\n\n@-webkit-keyframes slideOutUp {\n  to {\n    transform: translateY(100%); }\n  from {\n    transform: translateY(0); } }\n", ""]);
+	exports.push([module.id, "body {\n  font: 100% \"Ranga\", cursive;\n  background-color: #ADC2C0;\n  border: 8px solid #2B403E;\n  border-left: 8px solid #2B403E; }\n\n.elementMissing {\n  background-color: #c67070; }\n\n.elementMissing:hover {\n  background-color: #dca7a7; }\n\n#tableTitle {\n  background-color: #2B403E;\n  color: #e8f2f1;\n  font-size: larger;\n  border-radius: 10px 10px 0 0;\n  border-left: 2px solid #2B403E;\n  border-right: 2px solid #2B403E;\n  border-bottom: 2px solid #2B403E; }\n\n#tableCell table {\n  width: 100%; }\n\n#hl7Table.table-bordered-custom td,\n#hl7Table.table-bordered-custom th:not(#tableTitle) {\n  border: 2px solid #2B403E; }\n\n#hl7Table.table-hover-custom tbody tr:hover {\n  background-color: #e8f2f1;\n  cursor: pointer;\n  font-size: larger; }\n\n#hl7Table.table-hover-custom thead th:not(#tableTitle) {\n  background-color: #4c6764;\n  color: #e8f2f1; }\n\n#menu-container.anim-in-out.anim-out.anim-zoom-out-full.ng-enter,\n#menu-container.anim-in-out.anim-out.ng-enter .anim-zoom-out-full.ng-enter {\n  -webkit-transform: scale(0);\n  -ms-transform: scale(0);\n  transform: scale(0);\n  -webkit-transition: all 500ms;\n  transition: all 500ms; }\n\n#menu-container.anim-in-out.anim-out.anim-zoom-out-full.ng-leave,\n#menu-container.anim-in-out.anim-out.ng-leave .anim-zoom-out-full.ng-leave {\n  -webkit-transform: scale(1) !important;\n  -ms-transform: scale(1) !important;\n  transform: scale(1) !important;\n  -webkit-transition: all 500ms;\n  transition: all 500ms; }\n\n#navHome, h1.page-header a {\n  color: #2B403E; }\n\n#navHome:hover, h1.page-header a:hover {\n  color: #4c6764; }\n\n#diff-menu-icon {\n  max-height: 55%;\n  max-width: 55%;\n  -webkit-filter: invert(100%) brightness(2); }\n\ni#val-menu-icon {\n  font-family: FontAwesome;\n  font-weight: normal;\n  font-style: initial;\n  text-decoration: inherit;\n  -webkit-font-smoothing: antialiased;\n  font-size: 1907%;\n  color: #E8E5E5;\n  margin-top: 10% !important; }\n\n.menu-title {\n  font-family: \"Ranga\", cursive;\n  font-weight: 800;\n  font-size: 5vw;\n  margin-bottom: 3vh;\n  border-bottom: 4px solid;\n  color: #E8E5E5; }\n\n.menu-row {\n  height: 50%; }\n\n.menu-col {\n  border: 4px solid #2B403E;\n  border-radius: 20px;\n  height: 99%;\n  text-align: center;\n  transition: -webkit-transform .1s linear;\n  width: 32.6%;\n  margin: 3px;\n  margin-left: 0.45%; }\n\n.menu-col:hover {\n  -webkit-transform: scale(1.03, 1.03);\n  cursor: pointer;\n  -webkit-filter: brightness(1.28); }\n\n.menu-col:active {\n  -webkit-transform: scale(0.98, 0.98); }\n\n#diffToolButton {\n  background-color: #FF6C00;\n  transition: -webkit-transform .1s linear; }\n\n#valToolButton {\n  background-color: #00423B; }\n\n#otherButton2 {\n  background-color: #320101; }\n\n#otherButton3 {\n  background-color: #320101; }\n\n#otherButton4 {\n  background-color: #4c6764; }\n\n#otherButton5 {\n  background-color: #FF6C00; }\n\n.col-md-3.menu_button {\n  width: 32.5%;\n  float: left; }\n\n@media only screen and (max-width: 816px) {\n  body {\n    background-color: deeppink; }\n  .col-md-3.menu_button {\n    width: 32.35% !important; } }\n\n@media only screen and (max-width: 595px) {\n  body {\n    background-color: deeppink; }\n  .col-md-3.menu_button {\n    width: 32% !important; } }\n\n@media only screen and (max-width: 351px) {\n  body {\n    background-color: orangered; }\n  .col-md-3.menu_button {\n    width: 100% !important; }\n  .menu-title {\n    display: none; }\n  #diff-menu-icon {\n    padding-top: 23%;\n    max-height: 90%;\n    max-width: 100%; } }\n\n.site-selector-table {\n  font-family: monospace, sans-serif, serif; }\n\n.site-selector-table td:hover {\n  cursor: pointer; }\n\n#compareViewContainer {\n  font-size: 2rem; }\n\n.versionCompareDropDown {\n  font-family: monospace, sans-serif, serif; }\n\n.versionList:not(:last-of-type) {\n  border-bottom: 1px dotted #2B403E; }\n\n#comparisonResultsTBody {\n  font-family: monospace, sans-serif, serif; }\n\n.btn-primary {\n  color: #e8f2f1;\n  background-color: #2B403E;\n  border-color: #00423B;\n  letter-spacing: 2px;\n  font-size: 20px;\n  padding: 0 5 0 5; }\n\n.btn-primary:hover {\n  color: #2B403E;\n  background-color: #e8f2f1;\n  border-color: #00423B;\n  letter-spacing: 2px;\n  font-size: 20px;\n  padding: 0 5 0 5; }\n\n.compareTr.ng-enter,\n.compareTr.ng-leave {\n  -webkit-transition: 400ms cubic-bezier(0.25, 0.25, 0.75, 0.75) all;\n  -moz-transition: 400ms cubic-bezier(0.25, 0.25, 0.75, 0.75) all;\n  -ms-transition: 400ms cubic-bezier(0.25, 0.25, 0.75, 0.75) all;\n  -o-transition: 400ms cubic-bezier(0.25, 0.25, 0.75, 0.75) all;\n  transition: 400ms cubic-bezier(0.25, 0.25, 0.75, 0.75) all;\n  position: relative;\n  display: block; }\n\n.compareTr.ng-leave.ng-leave-active,\n.compareTr.ng-enter {\n  -webkit-transform: translatez(30px);\n  -moz-transform: translatez(30px);\n  -ms-transform: translatez(30px);\n  -o-transform: translatez(30px);\n  transform: translatez(30px);\n  opacity: 0;\n  height: 0px; }\n\n.compareTr.ng-enter.ng-enter-active,\n.compareTr.ng-leave {\n  -webkit-transform: translatez(30px);\n  -moz-transform: translatez(30px);\n  -ms-transform: translatez(30px);\n  -o-transform: translatez(30px);\n  transform: translatez(30px);\n  opacity: 1;\n  height: 30px; }\n\n.comparison_page.ng-enter,\n.comparison_page.ng-leave {\n  -webkit-animation: slideInRight 0.5s both ease-in;\n  -moz-animation: slideInRight 0.5s both ease-in;\n  animation: slideInRight 0.5s both ease-in; }\n\n@keyframes slideInRight {\n  from {\n    transform: translateX(100%); }\n  to {\n    transform: translateX(0); } }\n\n@-moz-keyframes slideInRight {\n  from {\n    -moz-transform: translateX(100%); }\n  to {\n    -moz-transform: translateX(0); } }\n\n@-webkit-keyframes slideInRight {\n  from {\n    -webkit-transform: translateX(100%); }\n  to {\n    -webkit-transform: translateX(0); } }\n\n@keyframes slideOutLeft {\n  to {\n    transform: translateX(-100%); } }\n\n@-moz-keyframes slideOutLeft {\n  to {\n    -moz-transform: translateX(-100%); } }\n\n@-webkit-keyframes slideOutLeft {\n  to {\n    -webkit-transform: translateX(-100%); } }\n\n@keyframes slideOutUp {\n  to {\n    transform: translateY(100%); }\n  from {\n    transform: translateY(0); } }\n\n@-moz-keyframes slideOutUp {\n  to {\n    transform: translateY(100%); }\n  from {\n    transform: translateY(0); } }\n\n@-webkit-keyframes slideOutUp {\n  to {\n    transform: translateY(100%); }\n  from {\n    transform: translateY(0); } }\n", ""]);
 	
 	// exports
 
@@ -55843,6 +55845,21 @@
 	        url: "/menu",
 	        templateUrl: "/templates/menu.html"
 	    })
+	    .state('validation', {
+	        abstract: true,
+	        url: "/validation",
+	        templateUrl: "/templates/ValToolUI/validation.html"
+	    })
+	    .state('validation.hl7', {//in menu, temporarily default to this view, but later to
+	        //submenu to select cms or hl7
+	        url: "/hl7",
+	        templateUrl: "/templates/ValToolUI/hl7Val.html",
+	        controller: "HL7Ctrl"
+	    })
+	    .state('validation.cms', {
+	        url: "/cms",
+	        templateUrl: "/templates/ValToolUI/cmsVal.html"
+	    })
 	    .state('diffCheck', {
 	        abstract: true,
 	        url: "",
@@ -55850,23 +55867,18 @@
 	    })
 	    .state('diffCheck.siteSelect', {
 	        url: "/siteSelect",
-	        views:{
-	            "": {
-	                templateUrl: "/templates/DiffToolUI/siteSelector.html",
-	                controller: "selectSiteCtrl"
-	            }
-	           
-	        }
+	        // views:{
+	        //     "": {
+	        templateUrl: "/templates/DiffToolUI/siteSelector.html",
+	        controller: "selectSiteCtrl"
+	            // }
+	        // }
 	    })
 	    .state('diffCheck.compare', {
 	        url: "/compare/:siteKey",		
 	        templateUrl: '/templates/DiffToolUI/compareView.html',
 	        controller: "comparisonCtrl"
 	    })
-	    .state('state2', {
-	        url: "/state2",
-	        templateUrl: "partials/state2.html"
-	    });
 	});
 
 
@@ -58419,7 +58431,7 @@
 /* 127 */
 /***/ function(module, exports) {
 
-	module.exports = "       \r\n       <div class=\"container\" id=\"compareViewContainer\">\r\n        <h3>Select 2 Versions</h3>\r\n        <div class=\"row\">\r\n            <div class=\"col-md-6 \">\r\n\t\t\t\t<div class=\"dropdown versionCompareDropDown\">\r\n\t\t\t\t\t<button class=\"btn btn-default dropdown-toggle col-md-12\" type=\"button\" id=\"dropdownMenu1\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"true\">\r\n\t\t\t\t\t\tVersion 1\r\n\t\t\t\t\t\t<span class=\"caret\"></span>\r\n\t\t\t\t\t</button>\r\n\t\t\t\t\t<ul class=\"dropdown-menu col-md-12\" aria-labelledby=\"dropdownMenu1\">\r\n\t\t\t\t\t\t<li ng-repeat=\"version in versions track by $index\" class=\"versionList\"><a ng-click=\"getV1($index)\">{{version.modifiedUtcDateTime | momentsAgo}}</a></li>\r\n\t\t\t\t\t\t<!--<li role=\"separator\" class=\"divider\"></li>-->\r\n\t\t\t\t\t</ul>\r\n\t\t\t\t</div>\r\n            </div>\r\n\t\t\t\r\n            <div class=\"col-md-6 \">\r\n                <div class=\"dropdown versionCompareDropDown\">\r\n\t\t\t\t\t<button class=\"btn btn-default dropdown-toggle col-md-12\" type=\"button\" id=\"dropdownMenu2\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"true\">\r\n\t\t\t\t\t\tVersion 2\r\n\t\t\t\t\t\t<span class=\"caret\"></span>\r\n\t\t\t\t\t</button>\r\n\t\t\t\t<ul class=\"dropdown-menu col-md-12\" aria-labelledby=\"dropdownMenu2\">\r\n\t\t\t\t\t\t<li ng-repeat=\"version in versions track by $index\" class=\"versionList\"><a ng-click=\"getV2($index)\">{{version.modifiedUtcDateTime | momentsAgo}}</a></li>\r\n\t\t\t\t\t\t<!--<li role=\"separator\" class=\"divider\"></li>-->\r\n\t\t\t\t\t</ul>\r\n\t\t\t\t</div>\r\n            </div>\r\n        </div>\r\n        \r\n        <button class=\"btn btn-primary\" ng-click=\"compareVersions()\">Compare</button>\r\n\t\t<br>\t\r\n\t\t<br>\t\r\n\t\t\r\n\t\t<div><span style=\"font-weight: bold\">Version 1: </span>{{v1}}</div>\r\n\t\t<div><span style=\"font-weight: bold\">Version 2: </span> {{v2}}</div>\r\n\t\r\n\t\t\r\n\t\t<br>\t\r\n\t\t<br>\r\n        \r\n                \r\n\t\t<div class=\"container\">\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-3\">\r\n                <div class=\"input-group\">\r\n                    <input type=\"text\" ng-model=\"search\" class=\"form-control\"  placeholder=\"ex: siteinfo\">\r\n                    <span type=\"submit\" class=\"input-group-addon btn\">Search</span>\r\n                </div>\r\n            </div>\r\n        </div>\t\r\n\r\n            \t\r\n\t\t<br>\t\r\n        \r\n        \r\n\t\t\t<table class=\"table\">\r\n\t\t\t\t<thead>\t\r\n\t\t\t\t\t<th ng-repeat=\"(key, value) in diffData[0] track by $index\">{{key}}</th>\r\n\t\t\t\t</thead>\r\n\t\t\t\t<tbody id=\"comparisonResultsTBody\">\t\r\n\t\t\t\t\t<tr ng-repeat=\"diff in diffData | filter:search\" class=\"compareTr\">\t\r\n\t\t\t\t\t\t<td>{{diff.Dataset}}</td>\r\n\t\t\t\t\t\t<td>{{diff.Property}}</td>\r\n\t\t\t\t\t\t<td>{{diff.Version1}}</td>\r\n\t\t\t\t\t\t<td>{{diff.Version2}}</td>\r\n\t\t\t\t\t</tr>\r\n\t\t\t\t</tbody>\r\n\t\t\t</table>\r\n\t\t</div>\r\n           \r\n       </div>\r\nREMOVE TRIM FILTERS B4 RUNNING!"
+	module.exports = "       \r\n       <div class=\"container\" id=\"compareViewContainer\">\r\n        <h3>Select 2 Versions</h3>\r\n        <div class=\"row\">\r\n            <div class=\"col-md-6 \">\r\n\t\t\t\t<div class=\"dropdown versionCompareDropDown\">\r\n\t\t\t\t\t<button class=\"btn btn-default dropdown-toggle col-md-12\" type=\"button\" id=\"dropdownMenu1\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"true\">\r\n\t\t\t\t\t\tVersion 1\r\n\t\t\t\t\t\t<span class=\"caret\"></span>\r\n\t\t\t\t\t</button>\r\n\t\t\t\t\t<ul class=\"dropdown-menu col-md-12\" aria-labelledby=\"dropdownMenu1\">\r\n\t\t\t\t\t\t<li ng-repeat=\"version in versions track by $index\" class=\"versionList\"><a ng-click=\"getV1($index)\">{{version.modifiedUtcDateTime | momentsAgo}}</a></li>\r\n\t\t\t\t\t\t<!--<li role=\"separator\" class=\"divider\"></li>-->\r\n\t\t\t\t\t</ul>\r\n\t\t\t\t</div>\r\n            </div>\r\n\t\t\t\r\n            <div class=\"col-md-6 \">\r\n                <div class=\"dropdown versionCompareDropDown\">\r\n\t\t\t\t\t<button class=\"btn btn-default dropdown-toggle col-md-12\" type=\"button\" id=\"dropdownMenu2\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"true\">\r\n\t\t\t\t\t\tVersion 2\r\n\t\t\t\t\t\t<span class=\"caret\"></span>\r\n\t\t\t\t\t</button>\r\n\t\t\t\t<ul class=\"dropdown-menu col-md-12\" aria-labelledby=\"dropdownMenu2\">\r\n\t\t\t\t\t\t<li ng-repeat=\"version in versions track by $index\" class=\"versionList\"><a ng-click=\"getV2($index)\">{{version.modifiedUtcDateTime | momentsAgo}}</a></li>\r\n\t\t\t\t\t\t<!--<li role=\"separator\" class=\"divider\"></li>-->\r\n\t\t\t\t\t</ul>\r\n\t\t\t\t</div>\r\n            </div>\r\n        </div>\r\n        \r\n        <button class=\"btn btn-primary\" ng-click=\"compareVersions()\">Compare</button>\r\n\t\t<br>\t\r\n\t\t<br>\t\r\n\t\t\r\n\t\t<div><span style=\"font-weight: bold\">Version 1: </span>{{v1}}</div>\r\n\t\t<div><span style=\"font-weight: bold\">Version 2: </span> {{v2}}</div>\r\n\t\r\n\t\t\r\n\t\t<br>\t\r\n\t\t<br>\r\n        \r\n                \r\n\t\t<div class=\"container\">\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-3\">\r\n                <div class=\"input-group\">\r\n                    <input type=\"text\" ng-model=\"search\" class=\"form-control\"  placeholder=\"ex: siteinfo\">\r\n                    <span type=\"submit\" class=\"input-group-addon btn\">Search</span>\r\n                </div>\r\n            </div>\r\n        </div>\t\r\n\r\n            \t\r\n\t\t<br>\t\r\n        \r\n        \r\n\t\t\t<table class=\"table\">\r\n\t\t\t\t<thead>\t\r\n                    <tr>\r\n\t\t\t\t\t    <th ng-repeat=\"(key, value) in diffData[0] track by $index\">{{key}}</th>\r\n                    </tr>\r\n\t\t\t\t</thead>\r\n\t\t\t\t<tbody id=\"comparisonResultsTBody\">\t\r\n\t\t\t\t\t<tr ng-repeat=\"diff in diffData | filter:search\" class=\"compareTr\">\t\r\n\t\t\t\t\t\t<td>{{diff.Dataset}}</td>\r\n\t\t\t\t\t\t<td>{{diff.Property}}</td>\r\n\t\t\t\t\t\t<td>{{diff.Version1}}</td>\r\n\t\t\t\t\t\t<td>{{diff.Version2}}</td>\r\n\t\t\t\t\t</tr>\r\n\t\t\t\t</tbody>\r\n\t\t\t</table>\r\n\t\t</div>\r\n           \r\n       </div>\r\nREMOVE TRIM FILTERS B4 RUNNING!"
 
 /***/ },
 /* 128 */
@@ -62671,6 +62683,643 @@
 	
 	// exports
 
+
+/***/ },
+/* 133 */
+/***/ function(module, exports) {
+
+	module.exports = "\r\n    \r\n    \r\n<table id=\"hl7Table\" class=\"table table-bordered-custom table-hover-custom\">\r\n    <thead>\r\n        <tr><th id=\"tableTitle\" colspan=\"3\" class=\"text-center\"> HL7</th></tr>\r\n        <tr>\r\n            <th>SEGMENT</th>\r\n            <th>FIELD</th>\r\n            <th>COMPONENT</th>\r\n        </tr>\r\n    </thead>\r\n    <tbody>\r\n        <tr ng-repeat=\"diff in segmentDiffs track by $index\">\r\n            <td ng-class=\"{elementMissing: diff.FirstElementPresent === false || diff.SecondElementPresent === false}\" ng-click=\"showNestedDiffs($index)\">{{diff.SegmentName}}</td>\r\n            <td>\r\n                <ul ng-repeat=\"x in diff.FieldDiff track by $index\">\r\n                    <li ng-class=\"{elementMissing: x.FirstElementPresent === false || x.SecondElementPresent === false}\">{{x.FieldName}}</li>\r\n                </ul>\r\n            </td>\r\n            <td id=\"tableCell\">\r\n                <table id=\"componentTable\">\r\n                    <thead>\t\r\n                        <tr>\r\n                            <th ng-repeat=\"(key, value) in diff.FieldDiff[0].ComponentDiff[0] track by $index\">\r\n                                {{key}}\r\n                            </th>\r\n                        </tr>\r\n\t\t\t\t    </thead>\r\n                    <tbody ng-repeat=\"x in diff.FieldDiff track by $index\">\t\r\n                        <tr ng-repeat=\"y in x.ComponentDiff track by $index\">\t\r\n                            <td>\r\n                               {{y.ComponentName}}\r\n                            </td>\r\n                            <td>\r\n                               {{y.Component1Value}}\r\n                            </td>\r\n                            <td>\r\n                               {{y.Component2Value}}\r\n                            </td>\r\n                            <td>\r\n                               {{y.DataType}}\r\n                            </td>\r\n                            <td>\r\n                               {{y.FirstElementPresent}}\r\n                            </td>\r\n                            <td>\r\n                               {{y.SecondElementPresent}}\r\n                            </td>\r\n                        </tr>\r\n\t\t\t\t    </tbody>\r\n                </table>\r\n                <!--<div ng-repeat=\"x in diff.FieldDiff track by $index\">\r\n                    <div ng-repeat=\"y in x.ComponentDiff track by $index\">\r\n                        {{y}}\r\n                    </div>\r\n                </div>-->\r\n            </td>\r\n        </tr>\r\n    </tbody>\r\n</table>\r\n\r\n         \r\n"
+
+/***/ },
+/* 134 */
+/***/ function(module, exports) {
+
+	angular.module('internalAdmin')
+	.controller("HL7Ctrl", function($scope){
+	    var allData = {
+	        "Message1": "MSH|^~\\&||COCWY|||291519949999||ADT^A93|WYGTADM.2.28952339|P|2.1\r\nEVN|A93|291519949999|||MIDNT RUN\r\nPID|1||W989334931|W64854|EGGLESTON^SHANNON^MARIE|LINDA|19891129|F|VAUGHN^SHANNON^MARIE|W|229 W SANDHILL^^DERBY^KS^67937^^^^||316-499-5992|316-651-5198||M|NON|W99943919919|515-92-6196\r\nPV1|1|O|W.LAB|EL|||BREISHK^Breit^Sharon^K^^^MD|BREISHK^Breit^Sharon^K^^^MD|ALVALO^Alvarado^Lorraine^^^^MD|LAB||||CR||N||CLI||98||||||||||||||||HOM|||COCWY|LAB|DEP|||291519939998|291519939998\r\nACC|29159191|19\r\nGT1|1||EGGLESTON^SHANNON^MARIE||229 W SANDHILL^^DERBY^KS^67937^^^^|316-499-5992||19891129|F||SA|515-92-6196|||MERITRUST|1257 N BUCKNER^^DERBY^KS^67937|316-651-5198|||\r\nGT1|2||EGGELSTON^BROCK^AARON||1121 N LAKEVIEW^^DERBY^KS^67937^^^^|316-399-5944||19869323|M||SP|513947141|||SPIRIT AEROSYSTEMS|3891 S OLIVER^^WICHITA^KS^67219|316-526-2121|||\r\nIN1|1|W.PREFSPIR||PREFERRED HEALTH SPIRIT|PO BOX 47219^^WICHITA^KS^67291-7219||316-699-2389|3491921994|MANAGED CARE|||29159791||||EGGLESTON^SHANNON|92|19869323||||||||||||||||||94996514392|||||||M\r\n",
+	        "Message2": "MSH|^~\\&||COCWY|||201510040000||ADT^A03|WYGTADM.2.28052339|P|2.1\r\nEVN|A03|201510040000|||MIDNT RUN\r\nPID|1||W080334031|W64854|EGGLESTON^SHANNON^MARIE|LINDA|19801129|F|VAUGHN^SHANNON^MARIE|W|220 W SANDHILL^^DERBY^KS^67037^^^^||316-409-5092|316-651-5108||M|NON|W00043910910|515-92-6106\r\nPV1|1|O|W.LAB|EL|||BREISHK^Breit^Shzron^K^^^MD|BREISHK^Breit^Shzron^K^^^MD|ALVALO^Alvzrzdo^Lorrzine^^^^MD|LAB||||CR||N||CLI||08||||||||||||||||HOM|||COCWY|LAB|DEP|||201510030908|201510030908\r\nACC|20150101|10\r\nGT1|1||EGGLESTON^SHANNON^MARIE||220 W SANDHILL^^DERBY^KS^67037^^^^|316-409-5092||19801129|F||SA|515-92-6106|||MERITRUST|1257 N BUCKNER^^DERBY^KS^67037|316-651-5108|||\r\nGT1|2||EGGELSTON^BROCK^AARON||1121 N LAKEVIEW^^DERBY^KS^67037^^^^|316-300-5044||19860323|M||SP|513947141|||SPIRIT AEROSYSTEMS|3801 S OLIVER^^WICHITA^KS^67210|316-526-2121|||\r\nIN1|1|W.PREFSPIR||PREFERRED HEALTH SPIRIT|PO BOX 47210^^WICHITA^KS^67201-7210||316-609-2380|3401021004|MANAGED CARE|||20150701||||EGGLESTON^SHANNON|02|19860323||||||||||||||||||94006514302|||||||M\r\n",
+	        "MessageType": "Patient Admission",
+	        "segmentDiff": [ {
+	            "SegmentName": "MSH",
+	            "FieldDiff": [{
+	                "FieldName": "Date/Time Of Message",
+	                "ComponentDiff": [{
+	                    "ComponentName": "Time",
+	                    "Component1Value": "291519949999",
+	                    "Component2Value": "201510040000",
+	                    "DataType": "Component",
+	                    "FirstElementPresent": true,
+	                    "SecondElementPresent": true
+	                }],
+	                "DataType": "Field",
+	                "FirstElementPresent": false,
+	                "SecondElementPresent": true
+	            },
+	            {
+	                "FieldName": "Message Type",
+	                "ComponentDiff": [{
+	                    "ComponentName": "Trigger Event",
+	                    "Component1Value": "A93",
+	                    "Component2Value": "A03",
+	                    "DataType": "Component",
+	                    "FirstElementPresent": true,
+	                    "SecondElementPresent": true
+	                }],
+	                "DataType": "Field",
+	                "FirstElementPresent": true,
+	                "SecondElementPresent": true
+	            },
+	            {
+	                "FieldName": "Message Control ID",
+	                "ComponentDiff": [{
+	                    "ComponentName": "",
+	                    "Component1Value": "WYGTADM.2.28952339",
+	                    "Component2Value": "WYGTADM.2.28052339",
+	                    "DataType": "Component",
+	                    "FirstElementPresent": true,
+	                    "SecondElementPresent": true
+	                }],
+	                "DataType": "Field",
+	                "FirstElementPresent": true,
+	                "SecondElementPresent": true
+	            }],
+	            "DataType": "Segment",
+	            "FirstElementPresent": true,
+	            "SecondElementPresent": true
+	        },
+	        {
+	            "SegmentName": "EVN",
+	            "FieldDiff": [{
+	                "FieldName": "Event Type Code",
+	                "ComponentDiff": [{
+	                    "ComponentName": "",
+	                    "Component1Value": "A93",
+	                    "Component2Value": "A03",
+	                    "DataType": "Component",
+	                    "FirstElementPresent": true,
+	                    "SecondElementPresent": true
+	                }],
+	                "DataType": "Field",
+	                "FirstElementPresent": true,
+	                "SecondElementPresent": true
+	            },
+	            {
+	                "FieldName": "Recorded Date/Time",
+	                "ComponentDiff": [{
+	                    "ComponentName": "Time",
+	                    "Component1Value": "291519949999",
+	                    "Component2Value": "201510040000",
+	                    "DataType": "Component",
+	                    "FirstElementPresent": true,
+	                    "SecondElementPresent": true
+	                }],
+	                "DataType": "Field",
+	                "FirstElementPresent": true,
+	                "SecondElementPresent": true
+	            }],
+	            "DataType": "Segment",
+	            "FirstElementPresent": true,
+	            "SecondElementPresent": false
+	        },
+	        {
+	            "SegmentName": "PID",
+	            "FieldDiff": [{
+	                "FieldName": "Patient Identifier List",
+	                "ComponentDiff": [{
+	                    "ComponentName": "ID Number",
+	                    "Component1Value": "W989334931",
+	                    "Component2Value": "W080334031",
+	                    "DataType": "Component",
+	                    "FirstElementPresent": true,
+	                    "SecondElementPresent": true
+	                }],
+	                "DataType": "Field",
+	                "FirstElementPresent": true,
+	                "SecondElementPresent": true
+	            },
+	            {
+	                "FieldName": "Date/Time of Birth",
+	                "ComponentDiff": [{
+	                    "ComponentName": "Time",
+	                    "Component1Value": "19891129",
+	                    "Component2Value": "19801129",
+	                    "DataType": "Component",
+	                    "FirstElementPresent": true,
+	                    "SecondElementPresent": true
+	                }],
+	                "DataType": "Field",
+	                "FirstElementPresent": true,
+	                "SecondElementPresent": true
+	            },
+	            {
+	                "FieldName": "Patient Address",
+	                "ComponentDiff": [{
+	                    "ComponentName": "Street Address",
+	                    "Component1Value": "229 W SANDHILL",
+	                    "Component2Value": "220 W SANDHILL",
+	                    "DataType": "Component",
+	                    "FirstElementPresent": true,
+	                    "SecondElementPresent": true
+	                },
+	                {
+	                    "ComponentName": "Zip or Postal Code",
+	                    "Component1Value": "67937",
+	                    "Component2Value": "67037",
+	                    "DataType": "Component",
+	                    "FirstElementPresent": true,
+	                    "SecondElementPresent": true
+	                }],
+	                "DataType": "Field",
+	                "FirstElementPresent": true,
+	                "SecondElementPresent": true
+	            },
+	            {
+	                "FieldName": "Phone Number - Home",
+	                "ComponentDiff": [{
+	                    "ComponentName": "Telephone Number",
+	                    "Component1Value": "316-499-5992",
+	                    "Component2Value": "316-409-5092",
+	                    "DataType": "Component",
+	                    "FirstElementPresent": true,
+	                    "SecondElementPresent": true
+	                }],
+	                "DataType": "Field",
+	                "FirstElementPresent": true,
+	                "SecondElementPresent": true
+	            },
+	            {
+	                "FieldName": "Phone Number - Business",
+	                "ComponentDiff": [{
+	                    "ComponentName": "Telephone Number",
+	                    "Component1Value": "316-651-5198",
+	                    "Component2Value": "316-651-5108",
+	                    "DataType": "Component",
+	                    "FirstElementPresent": true,
+	                    "SecondElementPresent": true
+	                }],
+	                "DataType": "Field",
+	                "FirstElementPresent": true,
+	                "SecondElementPresent": true
+	            },
+	            {
+	                "FieldName": "Patient Account Number",
+	                "ComponentDiff": [{
+	                    "ComponentName": "ID Number",
+	                    "Component1Value": "W99943919919",
+	                    "Component2Value": "W00043910910",
+	                    "DataType": "Component",
+	                    "FirstElementPresent": true,
+	                    "SecondElementPresent": true
+	                }],
+	                "DataType": "Field",
+	                "FirstElementPresent": true,
+	                "SecondElementPresent": true
+	            },
+	            {
+	                "FieldName": "SSN Number - Patient",
+	                "ComponentDiff": [{
+	                    "ComponentName": "",
+	                    "Component1Value": "515-92-6196",
+	                    "Component2Value": "515-92-6106",
+	                    "DataType": "Component",
+	                    "FirstElementPresent": true,
+	                    "SecondElementPresent": true
+	                }],
+	                "DataType": "Field",
+	                "FirstElementPresent": true,
+	                "SecondElementPresent": true
+	            }],
+	            "DataType": "Segment",
+	            "FirstElementPresent": true,
+	            "SecondElementPresent": true
+	        },
+	        {
+	            "SegmentName": "PV1",
+	            "FieldDiff": [{
+	                "FieldName": "Attending Doctor",
+	                "ComponentDiff": [{
+	                    "ComponentName": "Given Name",
+	                    "Component1Value": "Sharon",
+	                    "Component2Value": "Shzron",
+	                    "DataType": "Component",
+	                    "FirstElementPresent": true,
+	                    "SecondElementPresent": true
+	                }],
+	                "DataType": "Field",
+	                "FirstElementPresent": true,
+	                "SecondElementPresent": true
+	            },
+	            {
+	                "FieldName": "Referring Doctor",
+	                "ComponentDiff": [{
+	                    "ComponentName": "Given Name",
+	                    "Component1Value": "Sharon",
+	                    "Component2Value": "Shzron",
+	                    "DataType": "Component",
+	                    "FirstElementPresent": true,
+	                    "SecondElementPresent": true
+	                }],
+	                "DataType": "Field",
+	                "FirstElementPresent": true,
+	                "SecondElementPresent": true
+	            },
+	            {
+	                "FieldName": "Consulting Doctor",
+	                "ComponentDiff": [{
+	                    "ComponentName": "Family Name",
+	                    "Component1Value": "Alvarado",
+	                    "Component2Value": "Alvzrzdo",
+	                    "DataType": "Component",
+	                    "FirstElementPresent": true,
+	                    "SecondElementPresent": true
+	                },
+	                {
+	                    "ComponentName": "Given Name",
+	                    "Component1Value": "Lorraine",
+	                    "Component2Value": "Lorrzine",
+	                    "DataType": "Component",
+	                    "FirstElementPresent": true,
+	                    "SecondElementPresent": true
+	                }],
+	                "DataType": "Field",
+	                "FirstElementPresent": true,
+	                "SecondElementPresent": true
+	            },
+	            {
+	                "FieldName": "Financial Class",
+	                "ComponentDiff": [{
+	                    "ComponentName": "Financial Class Code",
+	                    "Component1Value": "98",
+	                    "Component2Value": "08",
+	                    "DataType": "Component",
+	                    "FirstElementPresent": true,
+	                    "SecondElementPresent": true
+	                }],
+	                "DataType": "Field",
+	                "FirstElementPresent": true,
+	                "SecondElementPresent": true
+	            },
+	            {
+	                "FieldName": "Admit Date/Time",
+	                "ComponentDiff": [{
+	                    "ComponentName": "Time",
+	                    "Component1Value": "291519939998",
+	                    "Component2Value": "201510030908",
+	                    "DataType": "Component",
+	                    "FirstElementPresent": true,
+	                    "SecondElementPresent": true
+	                }],
+	                "DataType": "Field",
+	                "FirstElementPresent": true,
+	                "SecondElementPresent": true
+	            },
+	            {
+	                "FieldName": "Discharge Date/Time",
+	                "ComponentDiff": [{
+	                    "ComponentName": "Time",
+	                    "Component1Value": "291519939998",
+	                    "Component2Value": "201510030908",
+	                    "DataType": "Component",
+	                    "FirstElementPresent": true,
+	                    "SecondElementPresent": true
+	                }],
+	                "DataType": "Field",
+	                "FirstElementPresent": true,
+	                "SecondElementPresent": true
+	            }],
+	            "DataType": "Segment",
+	            "FirstElementPresent": true,
+	            "SecondElementPresent": true
+	        },
+	        {
+	            "SegmentName": "ACC",
+	            "FieldDiff": [{
+	                "FieldName": "Accident Date/Time",
+	                "ComponentDiff": [{
+	                    "ComponentName": "Time",
+	                    "Component1Value": "29159191",
+	                    "Component2Value": "20150101",
+	                    "DataType": "Component",
+	                    "FirstElementPresent": true,
+	                    "SecondElementPresent": true
+	                }],
+	                "DataType": "Field",
+	                "FirstElementPresent": true,
+	                "SecondElementPresent": true
+	            },
+	            {
+	                "FieldName": "Accident Code",
+	                "ComponentDiff": [{
+	                    "ComponentName": "Identifier",
+	                    "Component1Value": "19",
+	                    "Component2Value": "10",
+	                    "DataType": "Component",
+	                    "FirstElementPresent": true,
+	                    "SecondElementPresent": true
+	                }],
+	                "DataType": "Field",
+	                "FirstElementPresent": true,
+	                "SecondElementPresent": true
+	            }],
+	            "DataType": "Segment",
+	            "FirstElementPresent": true,
+	            "SecondElementPresent": true
+	        },
+	        {
+	            "SegmentName": "GT1",
+	            "FieldDiff": [{
+	                "FieldName": "Guarantor Address",
+	                "ComponentDiff": [{
+	                    "ComponentName": "Street Address",
+	                    "Component1Value": "229 W SANDHILL",
+	                    "Component2Value": "220 W SANDHILL",
+	                    "DataType": "Component",
+	                    "FirstElementPresent": true,
+	                    "SecondElementPresent": true
+	                },
+	                {
+	                    "ComponentName": "Zip or Postal Code",
+	                    "Component1Value": "67937",
+	                    "Component2Value": "67037",
+	                    "DataType": "Component",
+	                    "FirstElementPresent": true,
+	                    "SecondElementPresent": true
+	                }],
+	                "DataType": "Field",
+	                "FirstElementPresent": true,
+	                "SecondElementPresent": true
+	            },
+	            {
+	                "FieldName": "Guarantor Ph Num - Home",
+	                "ComponentDiff": [{
+	                    "ComponentName": "Telephone Number",
+	                    "Component1Value": "316-499-5992",
+	                    "Component2Value": "316-409-5092",
+	                    "DataType": "Component",
+	                    "FirstElementPresent": true,
+	                    "SecondElementPresent": true
+	                }],
+	                "DataType": "Field",
+	                "FirstElementPresent": true,
+	                "SecondElementPresent": true
+	            },
+	            {
+	                "FieldName": "Guarantor Date/Time Of Birth",
+	                "ComponentDiff": [{
+	                    "ComponentName": "Time",
+	                    "Component1Value": "19891129",
+	                    "Component2Value": "19801129",
+	                    "DataType": "Component",
+	                    "FirstElementPresent": true,
+	                    "SecondElementPresent": true
+	                }],
+	                "DataType": "Field",
+	                "FirstElementPresent": true,
+	                "SecondElementPresent": true
+	            },
+	            {
+	                "FieldName": "Guarantor SSN",
+	                "ComponentDiff": [{
+	                    "ComponentName": "",
+	                    "Component1Value": "515-92-6196",
+	                    "Component2Value": "515-92-6106",
+	                    "DataType": "Component",
+	                    "FirstElementPresent": true,
+	                    "SecondElementPresent": true
+	                }],
+	                "DataType": "Field",
+	                "FirstElementPresent": true,
+	                "SecondElementPresent": true
+	            },
+	            {
+	                "FieldName": "Guarantor Employer Name",
+	                "ComponentDiff": [{
+	                    "ComponentName": "Prefix",
+	                    "Component1Value": "67937",
+	                    "Component2Value": "67037",
+	                    "DataType": "Component",
+	                    "FirstElementPresent": true,
+	                    "SecondElementPresent": true
+	                }],
+	                "DataType": "Field",
+	                "FirstElementPresent": true,
+	                "SecondElementPresent": true
+	            },
+	            {
+	                "FieldName": "Guarantor Employer Address",
+	                "ComponentDiff": [{
+	                    "ComponentName": "Street Address",
+	                    "Component1Value": "316-651-5198",
+	                    "Component2Value": "316-651-5108",
+	                    "DataType": "Component",
+	                    "FirstElementPresent": true,
+	                    "SecondElementPresent": true
+	                }],
+	                "DataType": "Field",
+	                "FirstElementPresent": true,
+	                "SecondElementPresent": true
+	            }],
+	            "DataType": "Segment",
+	            "FirstElementPresent": true,
+	            "SecondElementPresent": true
+	        },
+	        {
+	            "SegmentName": "GT1",
+	            "FieldDiff": [{
+	                "FieldName": "Guarantor Address",
+	                "ComponentDiff": [{
+	                    "ComponentName": "Zip or Postal Code",
+	                    "Component1Value": "67937",
+	                    "Component2Value": "67037",
+	                    "DataType": "Component",
+	                    "FirstElementPresent": true,
+	                    "SecondElementPresent": true
+	                }],
+	                "DataType": "Field",
+	                "FirstElementPresent": true,
+	                "SecondElementPresent": true
+	            },
+	            {
+	                "FieldName": "Guarantor Ph Num - Home",
+	                "ComponentDiff": [{
+	                    "ComponentName": "Telephone Number",
+	                    "Component1Value": "316-399-5944",
+	                    "Component2Value": "316-300-5044",
+	                    "DataType": "Component",
+	                    "FirstElementPresent": true,
+	                    "SecondElementPresent": true
+	                }],
+	                "DataType": "Field",
+	                "FirstElementPresent": true,
+	                "SecondElementPresent": true
+	            },
+	            {
+	                "FieldName": "Guarantor Date/Time Of Birth",
+	                "ComponentDiff": [{
+	                    "ComponentName": "Time",
+	                    "Component1Value": "19869323",
+	                    "Component2Value": "19860323",
+	                    "DataType": "Component",
+	                    "FirstElementPresent": true,
+	                    "SecondElementPresent": true
+	                }],
+	                "DataType": "Field",
+	                "FirstElementPresent": true,
+	                "SecondElementPresent": true
+	            },
+	            {
+	                "FieldName": "Guarantor Employer Name",
+	                "ComponentDiff": [{
+	                    "ComponentName": "Family Name",
+	                    "Component1Value": "3891 S OLIVER",
+	                    "Component2Value": "3801 S OLIVER",
+	                    "DataType": "Component",
+	                    "FirstElementPresent": true,
+	                    "SecondElementPresent": true
+	                },
+	                {
+	                    "ComponentName": "Prefix",
+	                    "Component1Value": "67219",
+	                    "Component2Value": "67210",
+	                    "DataType": "Component",
+	                    "FirstElementPresent": true,
+	                    "SecondElementPresent": true
+	                }],
+	                "DataType": "Field",
+	                "FirstElementPresent": true,
+	                "SecondElementPresent": true
+	            }],
+	            "DataType": "Segment",
+	            "FirstElementPresent": true,
+	            "SecondElementPresent": true
+	        },
+	        {
+	            "SegmentName": "IN1",
+	            "FieldDiff": [{
+	                "FieldName": "Insurance Company Address",
+	                "ComponentDiff": [{
+	                    "ComponentName": "Street Address",
+	                    "Component1Value": "PO BOX 47219",
+	                    "Component2Value": "PO BOX 47210",
+	                    "DataType": "Component",
+	                    "FirstElementPresent": true,
+	                    "SecondElementPresent": true
+	                },
+	                {
+	                    "ComponentName": "Zip or Postal Code",
+	                    "Component1Value": "67291-7219",
+	                    "Component2Value": "67201-7210",
+	                    "DataType": "Component",
+	                    "FirstElementPresent": true,
+	                    "SecondElementPresent": true
+	                }],
+	                "DataType": "Field",
+	                "FirstElementPresent": true,
+	                "SecondElementPresent": true
+	            },
+	            {
+	                "FieldName": "Insurance Co Phone Number",
+	                "ComponentDiff": [{
+	                    "ComponentName": "Telephone Number",
+	                    "Component1Value": "316-699-2389",
+	                    "Component2Value": "316-609-2380",
+	                    "DataType": "Component",
+	                    "FirstElementPresent": true,
+	                    "SecondElementPresent": true
+	                }],
+	                "DataType": "Field",
+	                "FirstElementPresent": true,
+	                "SecondElementPresent": true
+	            },
+	            {
+	                "FieldName": "Group Number",
+	                "ComponentDiff": [{
+	                    "ComponentName": "",
+	                    "Component1Value": "3491921994",
+	                    "Component2Value": "3401021004",
+	                    "DataType": "Component",
+	                    "FirstElementPresent": true,
+	                    "SecondElementPresent": true
+	                }],
+	                "DataType": "Field",
+	                "FirstElementPresent": true,
+	                "SecondElementPresent": true
+	            },
+	            {
+	                "FieldName": "Plan Effective Date",
+	                "ComponentDiff": [{
+	                    "ComponentName": "",
+	                    "Component1Value": "29159791",
+	                    "Component2Value": "20150701",
+	                    "DataType": "Component",
+	                    "FirstElementPresent": true,
+	                    "SecondElementPresent": true
+	                }],
+	                "DataType": "Field",
+	                "FirstElementPresent": true,
+	                "SecondElementPresent": true
+	            },
+	            {
+	                "FieldName": "Insured's Relationship To Patient",
+	                "ComponentDiff": [{
+	                    "ComponentName": "Identifier",
+	                    "Component1Value": "92",
+	                    "Component2Value": "02",
+	                    "DataType": "Component",
+	                    "FirstElementPresent": true,
+	                    "SecondElementPresent": true
+	                }],
+	                "DataType": "Field",
+	                "FirstElementPresent": true,
+	                "SecondElementPresent": true
+	            },
+	            {
+	                "FieldName": "Insured's Date Of Birth",
+	                "ComponentDiff": [{
+	                    "ComponentName": "Time",
+	                    "Component1Value": "19869323",
+	                    "Component2Value": "19860323",
+	                    "DataType": "Component",
+	                    "FirstElementPresent": true,
+	                    "SecondElementPresent": true
+	                }],
+	                "DataType": "Field",
+	                "FirstElementPresent": true,
+	                "SecondElementPresent": true
+	            },
+	            {
+	                "FieldName": "Policy Number",
+	                "ComponentDiff": [{
+	                    "ComponentName": "",
+	                    "Component1Value": "94996514392",
+	                    "Component2Value": "94006514302",
+	                    "DataType": "Component",
+	                    "FirstElementPresent": true,
+	                    "SecondElementPresent": true
+	                }],
+	                "DataType": "Field",
+	                "FirstElementPresent": true,
+	                "SecondElementPresent": true
+	            }],
+	            "DataType": "Segment",
+	            "FirstElementPresent": true,
+	            "SecondElementPresent": true
+	        }],
+	        "DataType": "Message",
+	        "FirstElementPresent": true,
+	        "SecondElementPresent": true
+	    }
+	
+	   $scope.segmentDiffs = allData.segmentDiff;
+	   $scope.fieldDiffs = [];
+	    allData.segmentDiff.forEach(function(segDiff){
+	        segDiff.FieldDiff.forEach(function(fieldDiff){
+	             $scope.fieldDiffs.push(fieldDiff);
+	        })
+	    });
+	    
+	});
 
 /***/ }
 /******/ ]);

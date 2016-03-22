@@ -27,34 +27,29 @@
                             </th>
                         </tr>
 				    </thead>
-                    <tbody ng-repeat="x in diff.FieldDiff track by $index">	
-                        <tr ng-repeat="y in x.ComponentDiff track by $index">	
+                    <tbody ng-repeat="fieldDiff in diff.FieldDiff track by $index">	
+                        <tr ng-repeat="componentDiff in fieldDiff.ComponentDiff track by $index" ng-class="{elementMissing: componentDiff.FirstElementPresent === false || componentDiff.SecondElementPresent === false}">	
                             <td>
-                               {{y.ComponentName}}
+                               {{componentDiff.ComponentName}}
                             </td>
                             <td>
-                               {{y.Component1Value}}
+                               {{componentDiff.Component1Value}}
                             </td>
                             <td>
-                               {{y.Component2Value}}
+                               {{componentDiff.Component2Value}}
                             </td>
                             <td>
-                               {{y.DataType}}
+                               {{componentDiff.DataType}}
                             </td>
                             <td>
-                               {{y.FirstElementPresent}}
+                               {{componentDiff.FirstElementPresent}}
                             </td>
                             <td>
-                               {{y.SecondElementPresent}}
+                               {{componentDiff.SecondElementPresent}}
                             </td>
                         </tr>
 				    </tbody>
                 </table>
-                <!--<div ng-repeat="x in diff.FieldDiff track by $index">
-                    <div ng-repeat="y in x.ComponentDiff track by $index">
-                        {{y}}
-                    </div>
-                </div>-->
             </td>
         </tr>
     </tbody>

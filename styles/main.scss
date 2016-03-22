@@ -24,7 +24,7 @@ body {
 
 }
 .elementMissing:hover {
-    background-color: $error-hover;
+    background-color: $error-hover!important;
 }
 
 #tableTitle {

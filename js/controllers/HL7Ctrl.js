@@ -109,7 +109,7 @@ angular.module('internalAdmin')
                     "Component1Value": "19891129",
                     "Component2Value": "19801129",
                     "DataType": "Component",
-                    "FirstElementPresent": true,
+                    "FirstElementPresent": false,
                     "SecondElementPresent": true
                 }],
                 "DataType": "Field",

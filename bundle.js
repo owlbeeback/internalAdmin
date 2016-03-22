@@ -55920,8 +55920,7 @@
 	        // return e;
 	    }
 	        console.log("returned notes: "+ trimmedNotes)
-	            return trimmedNotes[0];
-	   
+	        return trimmedNotes[0];
 	  };
 	}) 
 	

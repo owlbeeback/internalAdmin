@@ -1,28 +1,28 @@
 
     
     
-<table id="hl7Table" class="table table-bordered-custom table-hover-custom">
+<table id="hl7Table" class="table table-bordered-custom table-hover-custom overview">
     <thead>
-        <tr><th id="tableTitle" colspan="3" class="text-center"> HL7</th></tr>
+        <tr><th id="tableTitle" colspan="3" > HL7</th></tr>
         <tr>
-            <th>SEGMENT</th>
-            <th>FIELD</th>
-            <th>COMPONENT</th>
+            <th class="tableLabel text-center">SEGMENT</th>
+            <th class="tableLabel text-center">FIELDS</th>
+            <th class="tableLabel text-center">COMPONENTS</th>
         </tr>
     </thead>
     <tbody>
         <tr ng-repeat="diff in segmentDiffs track by $index">
             <td ng-class="{elementMissing: diff.FirstElementPresent === false || diff.SecondElementPresent === false}" ng-click="showNestedDiffs($index)">{{diff.SegmentName}}</td>
-            <td>
-                <ul ng-repeat="x in diff.FieldDiff track by $index">
-                    <li ng-class="{elementMissing: x.FirstElementPresent === false || x.SecondElementPresent === false}">{{x.FieldName}}</li>
-                </ul>
+            <td class="repeater">
+                <div ng-repeat="x in diff.FieldDiff track by $index">
+                    <div ng-class="{elementMissing: x.FirstElementPresent === false || x.SecondElementPresent === false}" class="hl7Field"><i ng-class="[{'icon-check' : x.FirstElementPresent === true && x.SecondElementPresent === true}, {'icon-exclamation-sign' : x.FirstElementPresent === false || x.SecondElementPresent === false}]"></i>{{x.FieldName}}</div>
+                </div>
             </td>
             <td id="tableCell">
                 <table id="componentTable">
                     <thead>	
                         <tr>
-                            <th ng-repeat="(key, value) in diff.FieldDiff[0].ComponentDiff[0] track by $index">
+                            <th ng-repeat="(key, value) in diff.FieldDiff[0].ComponentDiff[0] track by $index" ng-hide="key === 'DataType'">
                                 {{key}}
                             </th>
                         </tr>
@@ -38,7 +38,7 @@
                             <td>
                                {{componentDiff.Component2Value}}
                             </td>
-                            <td>
+                            <td ng-hide="true">
                                {{componentDiff.DataType}}
                             </td>
                             <td>

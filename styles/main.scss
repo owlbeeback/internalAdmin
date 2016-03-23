@@ -35,12 +35,34 @@ body {
     border-left: 2px solid $comp-storm;
     border-right: 2px solid $comp-storm;
     border-bottom: 2px solid $comp-storm;
+    padding-left: 3%; 
 }
 
 #tableCell table {
-    // font-size: larger;
     width: 100%;
-    
+}
+
+#tableCell table td,
+#tableCell table th,
+{
+    padding: 1%;
+}
+
+td.repeater {
+    padding-top: 0!important;
+    padding-bottom: 0!important;
+}
+
+th.tableLabel {
+    letter-spacing: .5rem;
+    font-size: larger;
+}
+
+div.hl7Field {
+    margin-right: -10px;
+    text-align: center;
+    padding: 5 0 10 0;
+    margin-left: -8px;
 }
 
 #hl7Table.table-bordered-custom td,
@@ -60,6 +82,7 @@ body {
     background-color: $comp-sea;
     color: $font-color;
 }
+
 // #hl7Table.table-hover-custom thead th:not(#tableTitle):hover,
 // {
 //     background-color: $comp-sea;

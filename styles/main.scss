@@ -37,6 +37,11 @@ body {
     border-bottom: 2px solid $comp-storm;
     padding-left: 3%; 
 }
+#tableTitle.btn-primary:hover {
+    background-color: $comp-storm;
+    color: $font-color;
+    font-size: larger;
+}
 
 #tableCell table {
     width: 100%;
@@ -53,28 +58,30 @@ td.repeater {
     padding-bottom: 0!important;
 }
 
-th.tableLabel {
-    letter-spacing: .5rem;
-    font-size: larger;
-}
+// div.hl7Field {
+//     margin-right: -10px;
+//     text-align: left;
+//     padding: 17px 0px 25px 60px;
+//     margin-left: -8px;
+//     /* left: 20px; */
+// }
 
 div.hl7Field {
-    margin-right: -10px;
-    text-align: center;
-    padding: 5 0 10 0;
+    margin-right: -96px;
+    text-align: left;
+    padding: 23px 0px 27px 35px;
     margin-left: -8px;
+    width: 109%;
+}
+
+.fieldDiffs [class^="icon-"] {
+    margin-right: 10px;
 }
 
 #hl7Table.table-bordered-custom td,
 #hl7Table.table-bordered-custom th:not(#tableTitle) 
 {
     border: 2px solid $comp-storm;
-}
-#hl7Table.table-hover-custom tbody tr:hover,
-{
-    background-color: $font-color;
-    cursor: pointer;
-    font-size: larger;
 }
 
 #hl7Table.table-hover-custom thead th:not(#tableTitle),
@@ -83,12 +90,38 @@ div.hl7Field {
     color: $font-color;
 }
 
+th.tableLabel {
+    letter-spacing: .5rem;
+    font-size: larger;
+}
+
+th.tableLabel:not(.messageLabel):hover {
+    font-size: 22;
+    color:  #C5C7C7;
+    -webkit-filter: brightness(1.5);
+    cursor: pointer;
+}
+
+i.icon-file-text:hover {
+    cursor: pointer;
+    font-size: larger;
+    color: $comp-peuce;
+    
+}
 // #hl7Table.table-hover-custom thead th:not(#tableTitle):hover,
 // {
-//     background-color: $comp-sea;
-//     color: $font-color;
+//     font-size: 22;
+//     color:  #C5C7C7;
+//     -webkit-filter: brightness(1.5);
 //     cursor: pointer;
 // }
+
+#hl7Table.table-hover-custom tbody tr:not(#tableTitle):hover,
+{
+    background-color: $font-color;
+    cursor: pointer;
+    font-size: larger;
+}
 
 #menu-container.anim-in-out.anim-out.anim-zoom-out-full.ng-enter,
 #menu-container.anim-in-out.anim-out.ng-enter .anim-zoom-out-full.ng-enter {

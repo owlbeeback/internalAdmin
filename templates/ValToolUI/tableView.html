@@ -1,18 +1,4 @@
-
-    
-    
-<table id="hl7Table" class="table table-bordered-custom table-hover-custom overview">
-    <thead>
-        <tr><th id="tableTitle" colspan="3" > HL7</th></tr>
-        <tr>
-            <th class="tableLabel text-center" ng-hide="tableView !== 'SEGMENT' && tableView !== 'OVERVIEW'" ng-click="customizeTableView('SEGMENT')">SEGMENT</th>
-            <th class="tableLabel text-center" ng-hide="tableView !== 'FIELDS' && tableView !== 'OVERVIEW'" ng-click="customizeTableView('FIELDS')">FIELDS</th>
-            <th class="tableLabel text-center" ng-hide="tableView !== 'COMPONENTS' && tableView !== 'OVERVIEW'" ng-click="customizeTableView('COMPONENTS')">COMPONENTS</th>
-            <th class="tableLabel messageLabel text-left" ng-show="tableView !== 'OVERVIEW'">MESSAGE 1 <i class="icon-file-text icon-large" ng-click="displayMessage('Message1')"></i></th>
-            <th class="tableLabel messageLabel text-left" ng-show="tableView !== 'OVERVIEW'">MESSAGE 2 <i class="icon-file-text icon-large" ng-click="displayMessage('Message2')"></i></th>
-        </tr>
-    </thead>
-    <tbody id="hl7Overview">
+ <tbody id="hl7Overview">
         <tr ng-repeat="diff in segmentDiffs track by $index">
             <td ng-class="{elementMissing: diff.FirstElementPresent === false || diff.SecondElementPresent === false}" ng-click="showNestedDiffs($index)">{{diff.SegmentName}}</td>
             <td class="repeater">
@@ -55,7 +41,3 @@
             </td>
         </tr>
     </tbody>
-    <!--<table-viewer ng-show="showTBody"></table-viewer>-->
-</table>
-
-         

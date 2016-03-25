@@ -625,4 +625,24 @@ angular.module('internalAdmin')
     
     console.log(allData.Message1)
     
-});
+    $scope.tableView = "OVERVIEW"
+    
+    $scope.customizeTableView = function(view){
+        $scope.tableView = $scope.tableView === view ? "OVERVIEW" : view
+    }
+    
+    $scope.displayMessage = function(msg){
+        alert(allData[msg]);
+    }
+})
+.directive('tableViewer', function(){
+     return {
+        // restrict: 'AE',
+        templateUrl: '/templates/ValToolUI/tableView.html',
+        replace: true,
+        link: function(scope){
+            console.log("scope: " , scope);
+        }
+        // scope: true,//inherited scope. has initial values of parent; can update in directive (child) scope without updates translating to containing controller (parent) scope
+    };
+})

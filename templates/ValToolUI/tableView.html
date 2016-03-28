@@ -1,12 +1,12 @@
  <tbody id="hl7Overview">
         <tr ng-repeat="diff in segmentDiffs track by $index">
-            <td ng-class="{elementMissing: diff.FirstElementPresent === false || diff.SecondElementPresent === false}" ng-click="showNestedDiffs($index)">{{diff.SegmentName}}</td>
-            <td class="repeater">
+            <td ng-hide="tableView !== 'SEGMENT' && tableView !== 'OVERVIEW'" ng-class="{elementMissing: diff.FirstElementPresent === false || diff.SecondElementPresent === false}" ng-click="showNestedDiffs($index)">{{diff.SegmentName}}</td>
+            <td ng-hide="tableView !== 'FIELDS' && tableView !== 'OVERVIEW'" class="repeater">
                 <div ng-repeat="x in diff.FieldDiff track by $index" class="fieldDiffs">
                     <div ng-class="{elementMissing: x.FirstElementPresent === false || x.SecondElementPresent === false}" class="hl7Field"><i ng-class="[{'icon-check' : x.FirstElementPresent === true && x.SecondElementPresent === true}, {'icon-exclamation-sign' : x.FirstElementPresent === false || x.SecondElementPresent === false}]"></i>{{x.FieldName}}</div>
                 </div>
             </td>
-            <td id="tableCell">
+            <td ng-hide="tableView !== 'COMPONENTS' && tableView !== 'OVERVIEW'" id="tableCell">
                 <table id="componentTable">
                     <thead>	
                         <tr id="tableTitle">
@@ -39,5 +39,11 @@
 				    </tbody>
                 </table>
             </td>
+            <td ng-show="tableView !== 'OVERVIEW'" class="repeater">
+                <div ng-repeat="x in diff.FieldDiff track by $index" class="fieldDiffs">
+                    present
+                </div>
+            </td>
+            <td ng-show="tableView !== 'OVERVIEW'">null</td>
         </tr>
     </tbody>

@@ -115,8 +115,8 @@ i.icon-file-text:hover {
 #hl7Table.table-hover-custom tbody tr:not(#tableTitle):hover,
 {
     background-color: $font-color;
-    cursor: pointer;
-    font-size: larger;
+    // cursor: pointer;
+    // font-size: larger;
 }
 
 #menu-container.anim-in-out.anim-out.anim-zoom-out-full.ng-enter,

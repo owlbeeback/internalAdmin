@@ -3,52 +3,10 @@
 	"Message2": "MSH|^~\\&||COCWY|||201510040000||ADT^A03|WYGTADM.2.28052339|P|2.1\r\nEVN|A03|201510040000|||MIDNT RUN\r\nPID|1||W080334031|W64854|EGGLESTON^SHANNON^MARIE|LINDA|19801129|F|VAUGHN^SHANNON^MARIE|W|220 W SANDHILL^^DERBY^KS^67037^^^^||316-409-5092|316-651-5108||M|NON|W00043910910|515-92-6106\r\nPV1|1|O|W.LAB|EL|||BREISHK^Breit^Shzron^K^^^MD|BREISHK^Breit^Shzron^K^^^MD|ALVALO^Alvzrzdo^Lorrzine^^^^MD|LAB||||CR||N||CLI||08||||||||||||||||HOM|||COCWY|LAB|DEP|||201510030908|201510030908\r\nACC|20150101|10\r\nGT1|1||EGGLESTON^SHANNON^MARIE||220 W SANDHILL^^DERBY^KS^67037^^^^|316-409-5092||19801129|F||SA|515-92-6106|||MERITRUST|1257 N BUCKNER^^DERBY^KS^67037|316-651-5108|||\r\nGT1|2||EGGELSTON^BROCK^AARON||1121 N LAKEVIEW^^DERBY^KS^67037^^^^|316-300-5044||19860323|M||SP|513947141|||SPIRIT AEROSYSTEMS|3801 S OLIVER^^WICHITA^KS^67210|316-526-2121|||\r\nIN1|1|W.PREFSPIR||PREFERRED HEALTH SPIRIT|PO BOX 47210^^WICHITA^KS^67201-7210||316-609-2380|3401021004|MANAGED CARE|||20150701||||EGGLESTON^SHANNON|02|19860323||||||||||||||||||94006514302|||||||M\r\n",
 	"MessageType": "Patient Admission",
 	"segmentDiff": [ {
-		"SegmentName": "MSH",
-		"FieldDiff": [{
-			"FieldName": "Date/Time Of Message",
-			"ComponentDiff": [{
-				"ComponentName": "Time",
-				"Component1Value": "291519949999",
-				"Component2Value": "201510040000",
-				"DataType": "Component",
-				"FirstElementPresent": true,
-				"SecondElementPresent": true
-			}],
-			"DataType": "Field",
-			"FirstElementPresent": true,
-			"SecondElementPresent": true
-		},
-		{
-			"FieldName": "Message Type",
-			"ComponentDiff": [{
-				"ComponentName": "Trigger Event",
-				"Component1Value": "A93",
-				"Component2Value": "A03",
-				"DataType": "Component",
-				"FirstElementPresent": true,
-				"SecondElementPresent": true
-			}],
-			"DataType": "Field",
-			"FirstElementPresent": true,
-			"SecondElementPresent": true
-		},
-		{
-			"FieldName": "Message Control ID",
-			"ComponentDiff": [{
-				"ComponentName": "",
-				"Component1Value": "WYGTADM.2.28952339",
-				"Component2Value": "WYGTADM.2.28052339",
-				"DataType": "Component",
-				"FirstElementPresent": true,
-				"SecondElementPresent": true
-			}],
-			"DataType": "Field",
-			"FirstElementPresent": true,
-			"SecondElementPresent": true
-		}],
+		"SegmentName": "MSH",		
 		"DataType": "Segment",
 		"FirstElementPresent": true,
-		"SecondElementPresent": true
+		"SecondElementPresent": false
 	},
 	{
 		"SegmentName": "EVN",
@@ -63,7 +21,7 @@
 				"SecondElementPresent": true
 			}],
 			"DataType": "Field",
-			"FirstElementPresent": true,
+			"FirstElementPresent": false,
 			"SecondElementPresent": true
 		},
 		{
@@ -74,7 +32,7 @@
 				"Component2Value": "201510040000",
 				"DataType": "Component",
 				"FirstElementPresent": true,
-				"SecondElementPresent": true
+				"SecondElementPresent": false
 			}],
 			"DataType": "Field",
 			"FirstElementPresent": true,
@@ -186,7 +144,7 @@
 				"Component2Value": "515-92-6106",
 				"DataType": "Component",
 				"FirstElementPresent": true,
-				"SecondElementPresent": true
+				"SecondElementPresent": false
 			}],
 			"DataType": "Field",
 			"FirstElementPresent": true,
@@ -233,7 +191,7 @@
 				"Component1Value": "Alvarado",
 				"Component2Value": "Alvzrzdo",
 				"DataType": "Component",
-				"FirstElementPresent": true,
+				"FirstElementPresent": false,
 				"SecondElementPresent": true
 			},
 			{
@@ -494,7 +452,7 @@
 		}],
 		"DataType": "Segment",
 		"FirstElementPresent": true,
-		"SecondElementPresent": true
+		"SecondElementPresent": false
 	},
 	{
 		"SegmentName": "IN1",
@@ -555,7 +513,7 @@
 				"Component1Value": "29159791",
 				"Component2Value": "20150701",
 				"DataType": "Component",
-				"FirstElementPresent": true,
+				"FirstElementPresent": false,
 				"SecondElementPresent": true
 			}],
 			"DataType": "Field",
@@ -583,7 +541,7 @@
 				"Component1Value": "19869323",
 				"Component2Value": "19860323",
 				"DataType": "Component",
-				"FirstElementPresent": true,
+				"FirstElementPresent": false,
 				"SecondElementPresent": true
 			}],
 			"DataType": "Field",
@@ -609,6 +567,6 @@
 		"SecondElementPresent": true
 	}],
 	"DataType": "Message",
-	"FirstElementPresent": true,
+	"FirstElementPresent": false,
 	"SecondElementPresent": true
 }

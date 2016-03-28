@@ -12,49 +12,8 @@
             <th class="tableLabel messageLabel text-left" ng-show="tableView !== 'OVERVIEW'">MESSAGE 2 <i class="icon-file-text icon-large" ng-click="displayMessage('Message2')"></i></th>
         </tr>
     </thead>
-    <tbody id="hl7Overview">
-        <tr ng-repeat="diff in segmentDiffs track by $index">
-            <td ng-class="{elementMissing: diff.FirstElementPresent === false || diff.SecondElementPresent === false}" ng-click="showNestedDiffs($index)">{{diff.SegmentName}}</td>
-            <td class="repeater">
-                <div ng-repeat="x in diff.FieldDiff track by $index" class="fieldDiffs">
-                    <div ng-class="{elementMissing: x.FirstElementPresent === false || x.SecondElementPresent === false}" class="hl7Field"><i ng-class="[{'icon-check' : x.FirstElementPresent === true && x.SecondElementPresent === true}, {'icon-exclamation-sign' : x.FirstElementPresent === false || x.SecondElementPresent === false}]"></i>{{x.FieldName}}</div>
-                </div>
-            </td>
-            <td id="tableCell">
-                <table id="componentTable">
-                    <thead>	
-                        <tr id="tableTitle">
-                            <th id="tableTitle" ng-repeat="(key, value) in diff.FieldDiff[0].ComponentDiff[0] track by $index" ng-hide="key === 'DataType'" >
-                                {{key}}
-                            </th>
-                        </tr>
-				    </thead>
-                    <tbody ng-repeat="fieldDiff in diff.FieldDiff track by $index">	
-                        <tr ng-repeat="componentDiff in fieldDiff.ComponentDiff track by $index" ng-class="{elementMissing: componentDiff.FirstElementPresent === false || componentDiff.SecondElementPresent === false}">	
-                            <td>
-                               {{componentDiff.ComponentName}}
-                            </td>
-                            <td>
-                               {{componentDiff.Component1Value}}
-                            </td>
-                            <td>
-                               {{componentDiff.Component2Value}}
-                            </td>
-                            <td ng-hide="true">
-                               {{componentDiff.DataType}}
-                            </td>
-                            <td>
-                               {{componentDiff.FirstElementPresent}}
-                            </td>
-                            <td>
-                               {{componentDiff.SecondElementPresent}}
-                            </td>
-                        </tr>
-				    </tbody>
-                </table>
-            </td>
-        </tr>
-    </tbody>
+
+    <tbody table-viewer></tbody>
     <!--<table-viewer ng-show="showTBody"></table-viewer>-->
 </table>
 

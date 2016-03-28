@@ -637,12 +637,12 @@ angular.module('internalAdmin')
 })
 .directive('tableViewer', function(){
      return {
-        // restrict: 'AE',
+        restrict: 'AE',
         templateUrl: '/templates/ValToolUI/tableView.html',
         replace: true,
-        link: function(scope){
-            console.log("scope: " , scope);
-        }
+        // link: function(scope){
+        //     console.log("scope: " , scope);
+        // }
         // scope: true,//inherited scope. has initial values of parent; can update in directive (child) scope without updates translating to containing controller (parent) scope
     };
 })

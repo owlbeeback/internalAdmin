@@ -8,8 +8,8 @@
             <th class="tableLabel text-center" ng-hide="tableView !== 'SEGMENT' && tableView !== 'OVERVIEW'" ng-click="customizeTableView('SEGMENT')">SEGMENT</th>
             <th class="tableLabel text-center" ng-hide="tableView !== 'FIELDS' && tableView !== 'OVERVIEW'" ng-click="customizeTableView('FIELDS')">FIELDS</th>
             <th class="tableLabel text-center" ng-hide="tableView !== 'COMPONENTS' && tableView !== 'OVERVIEW'" ng-click="customizeTableView('COMPONENTS')">COMPONENTS</th>
-            <th class="tableLabel messageLabel text-left" ng-show="tableView !== 'OVERVIEW'">MESSAGE 1 <i class="icon-file-text icon-large" ng-click="displayMessage('Message1')"></i></th>
-            <th class="tableLabel messageLabel text-left" ng-show="tableView !== 'OVERVIEW'">MESSAGE 2 <i class="icon-file-text icon-large" ng-click="displayMessage('Message2')"></i></th>
+            <th class="tableLabel messageLabel text-left" ng-show="tableView !== 'OVERVIEW'">MESSAGE 1 ELEMENT PRESENT  <span class="viewFullMessage">View Full Message <i class="icon-file-text icon-large" ng-click="displayMessage('Message1')"></i></span> </th>
+            <th class="tableLabel messageLabel text-left" ng-show="tableView !== 'OVERVIEW'">MESSAGE 2 ELEMENT PRESENT  <span class="viewFullMessage">View Full Message <i class="icon-file-text icon-large" ng-click="displayMessage('Message2')"></i></span> </th>
         </tr>
     </thead>
     <tbody table-viewer></tbody>

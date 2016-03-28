@@ -622,6 +622,7 @@ angular.module('internalAdmin')
              $scope.fieldDiffs.push(fieldDiff);
         })
     });
+    console.log($scope.fieldDiffs)
     
     console.log(allData.Message1)
     

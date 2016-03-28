@@ -40,10 +40,20 @@
                 </table>
             </td>
             <td ng-show="tableView !== 'OVERVIEW'" class="repeater">
-                <div ng-repeat="x in diff.FieldDiff track by $index" class="fieldDiffs">
-                    present
+                <div ng-if="tableView === 'SEGMENT'">
+                    {{diff.FirstElementPresent}}
+                </div>
+                <div ng-if="tableView === 'FIELDS'" ng-repeat="fieldDiff in diff.FieldDiff track by $index">
+                    {{fieldDiff.FirstElementPresent}}
                 </div>
             </td>
-            <td ng-show="tableView !== 'OVERVIEW'">null</td>
+            <td ng-show="tableView !== 'OVERVIEW'">
+                <div ng-if="tableView === 'SEGMENT'">
+                     {{diff.SecondElementPresent}}
+                </div>
+                <div ng-if="tableView === 'FIELDS'" ng-repeat="fieldDiff in diff.FieldDiff track by $index">
+                    {{fieldDiff.SecondElementPresent}}
+                </div>
+            </td>
         </tr>
     </tbody>

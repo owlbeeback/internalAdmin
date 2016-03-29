@@ -43,7 +43,7 @@
                 <div ng-if="tableView === 'SEGMENT'">
                     {{diff.FirstElementPresent}}
                 </div>
-                <div class="fieldElementPresent" ng-if="tableView === 'FIELDS'" ng-repeat="fieldDiff in diff.FieldDiff track by $index">
+                <div class="fieldElementPresent" ng-if="tableView === 'FIELDS'" ng-repeat="fieldDiff in diff.FieldDiff track by $index" ng-class="{elementMissing: fieldDiff.FirstElementPresent === false}">
                     {{fieldDiff.FirstElementPresent}}
                 </div>
             </td>
@@ -51,7 +51,7 @@
                 <div ng-if="tableView === 'SEGMENT'">
                      {{diff.SecondElementPresent}}
                 </div>
-                <div class="fieldElementPresent" ng-if="tableView === 'FIELDS'" ng-repeat="fieldDiff in diff.FieldDiff track by $index">
+                <div class="fieldElementPresent" ng-if="tableView === 'FIELDS'" ng-repeat="fieldDiff in diff.FieldDiff track by $index" ng-class="{elementMissing: fieldDiff.SecondElementPresent === false}">
                     {{fieldDiff.SecondElementPresent}}
                 </div>
             </td>

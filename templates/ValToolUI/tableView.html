@@ -40,7 +40,7 @@
                 </table>
             </td>
             <td ng-show="tableView !== 'OVERVIEW'" class="repeater">
-                <div ng-if="tableView === 'SEGMENT'">
+                <div ng-if="tableView === 'SEGMENT'" ng-class="{elementMissing: diff.FirstElementPresent === false}">
                     {{diff.FirstElementPresent}}
                 </div>
                 <div class="fieldElementPresent" ng-if="tableView === 'FIELDS'" ng-repeat="fieldDiff in diff.FieldDiff track by $index" ng-class="{elementMissing: fieldDiff.FirstElementPresent === false}">
@@ -48,7 +48,7 @@
                 </div>
             </td>
             <td ng-show="tableView !== 'OVERVIEW'">
-                <div ng-if="tableView === 'SEGMENT'">
+                <div ng-if="tableView === 'SEGMENT'" ng-class="{elementMissing: diff.SecondElementPresent === false}">
                      {{diff.SecondElementPresent}}
                 </div>
                 <div class="fieldElementPresent" ng-if="tableView === 'FIELDS'" ng-repeat="fieldDiff in diff.FieldDiff track by $index" ng-class="{elementMissing: fieldDiff.SecondElementPresent === false}">
